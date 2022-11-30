@@ -2,7 +2,7 @@ version: "3"
 services:
 
    db:
-     image: postgres:9.6
+     image: postgres
      restart: always
      environment:
        POSTGRES_PASSWORD: oxefood
@@ -10,4 +10,7 @@ services:
      ports:
        - 5433:5432
      volumes:
-       - ./postgres-data:/bitnami/postgresql/data
+       - postgres_data:/var/lib/postgresql/data
+
+volumes:
+    postgres_data: {}
