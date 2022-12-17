@@ -1,8 +1,10 @@
 package br.com.ifpe.oxefoodmarcilio.servicos.cliente;
 
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.br.CPF;
 
 import br.com.ifpe.oxefoodmarcilio.modelo.cliente.Cliente;
 import lombok.AllArgsConstructor;
@@ -16,24 +18,26 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ClienteRequest {
 
-	private String chaveEmpresa;
+    @NotNull(message = "O Chave Empresa é de preenchimento obrigatório")
+    @NotBlank(message = "O Chave Empresa é de preenchimento obrigatório")
+    private String chaveEmpresa;
 
-	@Size(max = 1000)
-	@NotNull
-	@NotEmpty
-	private String nome;
+    @NotNull(message = "O Nome é de preenchimento obrigatório")
+    @NotBlank(message = "O Nome é de preenchimento obrigatório")
+    @Length(max = 100, message = "O Nome deverá ter no máximo {max} caracteres")
+    private String nome;
 
-	@Size(max = 20)
-	@NotNull
-	private String cpf;
+    
+    @NotNull(message = "O CPF é de preenchimento obrigatório")
+    @NotBlank(message = "O CPF é de preenchimento obrigatório")
+    @CPF
+    private String cpf;
 
-	@Size(max = 20)
-	@NotNull
-	private String fone;
+    @Length(min = 8, max = 20, message = "O campo Fone tem que ter entre {min} e {max} caracteres")
+    private String fone;
 
-	@Size(max = 20)
-	@NotNull
-	private String foneAlternativo;
+    private String foneAlternativo;
+
 
 	public Cliente buildCliente() {
 		return Cliente.builder().chaveEmpresa(chaveEmpresa).nome(nome).cpf(cpf).fone(fone)

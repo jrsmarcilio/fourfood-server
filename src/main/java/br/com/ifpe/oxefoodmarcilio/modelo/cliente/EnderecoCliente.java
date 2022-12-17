@@ -3,12 +3,15 @@ package br.com.ifpe.oxefoodmarcilio.modelo.cliente;
 import java.io.Serializable;
 
 import javax.persistence.Column;
-import javax.persistence.JoinColumn;
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
+import org.apache.commons.lang3.StringUtils;
 import org.hibernate.annotations.Where;
+
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import br.com.ifpe.oxefoodmarcilio.util.entity.EntidadeNegocio;
 import lombok.AllArgsConstructor;
@@ -18,6 +21,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity
 @Table
 @Builder
 @Setter
@@ -29,48 +33,54 @@ import lombok.Setter;
 public class EnderecoCliente extends EntidadeNegocio implements Serializable {
 
 	private static final long serialVersionUID = -7327761359456234333L;
-	public static final String LABEL = "EnderecoCliente";
+	public static final String LABEL = "Endereço";
 
+	@JsonIgnore
 	@ManyToOne
-	@JoinColumn
 	private Cliente cliente;
 
-	@NotNull
-	@Column(nullable = false, length = 100)
+	@Column(length = 255, nullable = false)
 	private String rua;
 
-	@NotNull
-	@Column(nullable = false, length = 100)
+	@Column(length = 8, nullable = false)
 	private String numero;
 
-	@NotNull
-	@Column(nullable = false, length = 100)
+	@Column(length = 50, nullable = false)
 	private String bairro;
 
-	@NotNull
-	@Column(nullable = false, length = 100)
+	@Column(length = 10, nullable = false)
 	private String cep;
 
-	@NotNull
-	@Column(nullable = false, length = 100)
+	@Column(length = 50, nullable = false)
 	private String cidade;
 
-	@NotNull
-	@Column(nullable = false, length = 100)
+	@Column(length = 2, nullable = false)
 	private String estado;
 
-	@NotNull
-	@Column(nullable = false, length = 100)
+	@Column(length = 255)
 	private String complemento;
 
-	public void updateFrom(EnderecoCliente param) {
-		this.setRua(param.getRua());
-		this.setNumero(param.getNumero());
-		this.setBairro(param.getBairro());
-		this.setCep(param.getCep());
-		this.setCidade(param.getCidade());
-		this.setEstado(param.getEstado());
-		this.setComplemento(param.getComplemento());
+	@JsonGetter(value = "enderecoFormatado")
+	public String getEnderecoFormatado() {
+		String complemento = StringUtils.isNotBlank(this.complemento) ? String.format(" - %s", this.complemento) : "";
+		return String.format("%s Nº%s - %s, %s, %s%s", this.rua, this.numero, this.cidade, this.estado, this.cep,
+				complemento);
+	}
+
+	@JsonGetter(value = "localizacao")
+	public String getLocalizacao() {
+		return String.format("%s, %s - %s, %s", this.rua, this.numero, this.cidade, this.estado, this.cep);
+	}
+
+	public void updateFrom(EnderecoCliente novoEndereco) {
+
+		this.setRua(novoEndereco.getRua());
+		this.setNumero(novoEndereco.getNumero());
+		this.setBairro(novoEndereco.getBairro());
+		this.setCep(novoEndereco.getCep());
+		this.setCidade(novoEndereco.getCidade());
+		this.setEstado(novoEndereco.getEstado());
+		this.setComplemento(novoEndereco.getComplemento());
 	}
 
 }

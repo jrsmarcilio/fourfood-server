@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.ifpe.oxefoodmarcilio.util.entity.GenericService;
 import br.com.ifpe.oxefoodmarcilio.util.exception.EntityAlreadyExistsException;
+import br.com.ifpe.oxefoodmarcilio.util.exception.produto.ProdutoException;
 
 @Service
 public class ProdutoService extends GenericService {
@@ -19,8 +20,10 @@ public class ProdutoService extends GenericService {
 
 	@Transactional
 	public Produto save(Produto produto) {
-		super.validarRegistroVazio(produto.getDescricao(), "descrição");
-		this.validarProdutoExistente(produto, null);
+		if (produto.getValorUnitario() < 10) {
+		    throw new ProdutoException(ProdutoException.MSG_VALOR_MINIMO_PRODUTO);
+		}
+		
 		super.preencherCamposAuditoria(produto);
 		return repository.save(produto);
 	}

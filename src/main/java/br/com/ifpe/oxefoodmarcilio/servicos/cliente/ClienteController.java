@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.ifpe.oxefoodmarcilio.modelo.cliente.Cliente;
 import br.com.ifpe.oxefoodmarcilio.modelo.cliente.ClienteService;
 import br.com.ifpe.oxefoodmarcilio.util.entity.GenericController;
+import br.com.ifpe.oxefoodmarcilio.util.exception.BadRequestException;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
@@ -31,9 +32,31 @@ public class ClienteController extends GenericController {
 	@ApiOperation(value = "Serviço responsável por salvar um cliente no sistema.")
 	@PostMapping
 	public ResponseEntity<Cliente> save(@RequestBody @Valid ClienteRequest request) {
-		super.validarPreenchimentoChave(request.getChaveEmpresa());
-		Cliente cliente = clienteService.save(request.buildCliente());
-		return new ResponseEntity<Cliente>(cliente, HttpStatus.CREATED);
+
+		Cliente clienteRequisicao = request.buildCliente();
+		StringBuilder erros = new StringBuilder();
+		if (clienteRequisicao.getChaveEmpresa() == null || clienteRequisicao.getChaveEmpresa().equals("")) {
+			erros.append("O campo Chave Empresa é de preenchimento obrigatório. ");
+		}
+		if (clienteRequisicao.getNome() == null || clienteRequisicao.getNome().equals("")) {
+			erros.append("O campo Nome é de preenchimento obrigatório. ");
+		}
+		if (clienteRequisicao.getNome() != null && clienteRequisicao.getNome().length() > 100) {
+			erros.append("O campo Nome não pode ter mais que 100 caracteres. ");
+		}
+		if (clienteRequisicao.getCpf() == null || clienteRequisicao.getCpf().equals("")) {
+			erros.append("O campo CPF é de preenchimento obrigatório. ");
+		}
+		if (clienteRequisicao.getFone() != null
+				&& (clienteRequisicao.getFone().length() < 8 || clienteRequisicao.getFone().length() > 20)) {
+			erros.append("O campo Fone tem que ter entre 8 e 20 caracteres. ");
+		}
+		if (erros.length() > 0) {
+			throw new BadRequestException(erros.toString());
+		}
+
+		Cliente clienteSalvo = clienteService.save(clienteRequisicao);
+		return new ResponseEntity<Cliente>(clienteSalvo, HttpStatus.CREATED);
 	}
 
 	@ApiOperation(value = "Serviço responsável por obter um cliente referente ao Id passado na URL.")

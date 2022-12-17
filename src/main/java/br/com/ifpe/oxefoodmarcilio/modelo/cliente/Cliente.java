@@ -33,14 +33,17 @@ public class Cliente extends EntidadeAuditavel {
 	private static final long serialVersionUID = -2168789211116655513L;
 	public static final String LABEL = "Cliente";
 
-	@OneToMany(mappedBy = "cliente", orphanRemoval = true, fetch = FetchType.EAGER)
-	private List<EnderecoCliente> enderecos;
+    @OneToMany(mappedBy = "cliente", orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<EnderecoCliente> enderecos;
 
 	@JsonIgnore
 	@NotNull
 	@Column(nullable = false)
 	private String chaveEmpresa;
 
+    @Column
+    private String email;
+	
 	@NotNull
 	@Column(nullable = false, length = 100)
 	private String nome;
