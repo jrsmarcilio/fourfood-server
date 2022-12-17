@@ -19,19 +19,17 @@ import br.com.ifpe.oxefoodmarcilio.util.entity.GenericController;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/api/endereco")
+@RequestMapping("/api/enderecocliente")
 public class EnderecoClienteController extends GenericController {
 
 	@Autowired
 	private EnderecoClienteService enderecoService;
 
 	@ApiOperation(value = "Rota responsável por adicionar um endereço a um cliente já existente.")
-	@PostMapping("/{clienteId}")
+	@PostMapping("/{clienteId}/endereco")
 	public ResponseEntity<EnderecoCliente> adicionarEnderecoCliente(@RequestBody @Valid EnderecoClienteRequest request,
 			@PathVariable("clienteId") Long clienteId) {
-		System.out.println(request);
-
-		EnderecoCliente endereco = enderecoService.save(clienteId, request.buildEndereco());
+		EnderecoCliente endereco = enderecoService.adicionarEnderecoCliente(clienteId, request.buildEndereco());
 		return new ResponseEntity<EnderecoCliente>(endereco, HttpStatus.CREATED);
 	}
 
@@ -39,7 +37,6 @@ public class EnderecoClienteController extends GenericController {
 	@PutMapping("/{id}")
 	public ResponseEntity<EnderecoCliente> atualizarEnderecoCliente(@PathVariable("id") Long id,
 			@RequestBody EnderecoClienteRequest request) {
-
 		EnderecoCliente endereco = enderecoService.atualizarEnderecoCliente(id, request.buildEndereco());
 		return new ResponseEntity<EnderecoCliente>(endereco, HttpStatus.OK);
 	}
@@ -47,9 +44,7 @@ public class EnderecoClienteController extends GenericController {
 	@ApiOperation(value = "Rota responsável por remover um endereço de um determinado cliente")
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> removerEnderecoCliente(@PathVariable Long id) {
-
 		enderecoService.removerEnderecoCliente(id);
 		return ResponseEntity.noContent().build();
 	}
-
 }

@@ -32,7 +32,7 @@ import lombok.Setter;
 @Where(clause = "habilitado = true")
 public class EnderecoCliente extends EntidadeNegocio implements Serializable {
 
-	private static final long serialVersionUID = -7327761359456234333L;
+	private static final long serialVersionUID = -2900592719869407807L;
 	public static final String LABEL = "Endereço";
 
 	@JsonIgnore
@@ -73,7 +73,6 @@ public class EnderecoCliente extends EntidadeNegocio implements Serializable {
 	}
 
 	public void updateFrom(EnderecoCliente novoEndereco) {
-
 		this.setRua(novoEndereco.getRua());
 		this.setNumero(novoEndereco.getNumero());
 		this.setBairro(novoEndereco.getBairro());

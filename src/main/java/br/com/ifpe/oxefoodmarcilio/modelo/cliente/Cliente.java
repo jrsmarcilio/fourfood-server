@@ -24,8 +24,8 @@ import lombok.Setter;
 @Table(name = "Cliente")
 @Where(clause = "habilitado = true")
 @Builder
-@Setter
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cliente extends EntidadeAuditavel {
@@ -33,17 +33,17 @@ public class Cliente extends EntidadeAuditavel {
 	private static final long serialVersionUID = -2168789211116655513L;
 	public static final String LABEL = "Cliente";
 
-    @OneToMany(mappedBy = "cliente", orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<EnderecoCliente> enderecos;
+	@OneToMany(mappedBy = "cliente", orphanRemoval = true, fetch = FetchType.EAGER)
+	private List<EnderecoCliente> enderecos;
 
 	@JsonIgnore
 	@NotNull
 	@Column(nullable = false)
 	private String chaveEmpresa;
 
-    @Column
-    private String email;
-	
+	@Column
+	private String email;
+
 	@NotNull
 	@Column(nullable = false, length = 100)
 	private String nome;
@@ -60,12 +60,11 @@ public class Cliente extends EntidadeAuditavel {
 	@Column(nullable = false, length = 20)
 	private String foneAlternativo;
 
-	public void updateFrom(Cliente params) {
-		this.setEnderecos(params.getEnderecos());
-		this.setChaveEmpresa(params.getChaveEmpresa());
-		this.setNome(params.getNome());
-		this.setCpf(params.getCpf());
-		this.setFone(params.getFone());
-		this.setFoneAlternativo(params.getFoneAlternativo());
+	public void updateFrom(Cliente param) {
+		this.setEmail(param.getEmail());
+		this.setNome(param.getNome());
+		this.setCpf(param.getCpf());
+		this.setFone(param.getFone());
+		this.setFoneAlternativo(param.getFoneAlternativo());
 	}
 }

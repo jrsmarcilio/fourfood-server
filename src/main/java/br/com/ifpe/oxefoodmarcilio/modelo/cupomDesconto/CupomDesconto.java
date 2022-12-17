@@ -1,5 +1,8 @@
 package br.com.ifpe.oxefoodmarcilio.modelo.cupomDesconto;
 
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -25,6 +28,12 @@ public class CupomDesconto extends EntidadeAuditavel {
 	private static final long serialVersionUID = -506482202180118761L;
 	public static final String LABEL = "CupomDesconto";
 	
+	@Column
+	private LocalDateTime dataInicioVigencia;
+
+	@Column
+	private LocalDateTime dataFimVigencia;
+	
 	String chaveEmpresa;
 	String codigoDesconto;
 	Double percentualDesconto;
@@ -39,6 +48,9 @@ public class CupomDesconto extends EntidadeAuditavel {
 		this.setValorDesconto(params.getValorDesconto());
 		this.setValorMinimoPedidoPermitido(params.getValorMinimoPedidoPermitido());
 		this.setQuantidadeUso(params.getQuantidadeUso());
+		this.setDataInicioVigencia(params.getDataInicioVigencia());
+		this.setDataFimVigencia(params.getDataFimVigencia());
+
 	}
 	
 }

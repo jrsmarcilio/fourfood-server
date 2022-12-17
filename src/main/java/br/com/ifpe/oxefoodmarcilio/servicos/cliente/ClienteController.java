@@ -19,8 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.ifpe.oxefoodmarcilio.modelo.cliente.Cliente;
 import br.com.ifpe.oxefoodmarcilio.modelo.cliente.ClienteService;
 import br.com.ifpe.oxefoodmarcilio.util.entity.GenericController;
-import br.com.ifpe.oxefoodmarcilio.util.exception.BadRequestException;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping("/api/cliente")
@@ -29,60 +30,41 @@ public class ClienteController extends GenericController {
 	@Autowired
 	private ClienteService clienteService;
 
-	@ApiOperation(value = "Serviço responsável por salvar um cliente no sistema.")
 	@PostMapping
 	public ResponseEntity<Cliente> save(@RequestBody @Valid ClienteRequest request) {
-
 		Cliente clienteRequisicao = request.buildCliente();
-		StringBuilder erros = new StringBuilder();
-		if (clienteRequisicao.getChaveEmpresa() == null || clienteRequisicao.getChaveEmpresa().equals("")) {
-			erros.append("O campo Chave Empresa é de preenchimento obrigatório. ");
-		}
-		if (clienteRequisicao.getNome() == null || clienteRequisicao.getNome().equals("")) {
-			erros.append("O campo Nome é de preenchimento obrigatório. ");
-		}
-		if (clienteRequisicao.getNome() != null && clienteRequisicao.getNome().length() > 100) {
-			erros.append("O campo Nome não pode ter mais que 100 caracteres. ");
-		}
-		if (clienteRequisicao.getCpf() == null || clienteRequisicao.getCpf().equals("")) {
-			erros.append("O campo CPF é de preenchimento obrigatório. ");
-		}
-		if (clienteRequisicao.getFone() != null
-				&& (clienteRequisicao.getFone().length() < 8 || clienteRequisicao.getFone().length() > 20)) {
-			erros.append("O campo Fone tem que ter entre 8 e 20 caracteres. ");
-		}
-		if (erros.length() > 0) {
-			throw new BadRequestException(erros.toString());
-		}
-
 		Cliente clienteSalvo = clienteService.save(clienteRequisicao);
 		return new ResponseEntity<Cliente>(clienteSalvo, HttpStatus.CREATED);
 	}
 
 	@ApiOperation(value = "Serviço responsável por obter um cliente referente ao Id passado na URL.")
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Retorna o cliente."),
+			@ApiResponse(code = 401, message = "Acesso não autorizado."),
+			@ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso."),
+			@ApiResponse(code = 404, message = "Não foi encontrado um registro para o Id informado."),
+			@ApiResponse(code = 500, message = "Foi gerado um erro no servidor."), })
 	@GetMapping("/{id}")
-	public Cliente get(@PathVariable Long id) {
+	public Cliente obterClientePorID(@PathVariable Long id) {
 		return clienteService.obterClientePorID(id);
 	}
 
-	@ApiOperation(value = "Serviço responsável por obter um cliente referente a chave passada na URL.")
+	@ApiOperation(value = "Serviço responsável por obter uma lista de clientes da empresa passado na URL.")
 	@GetMapping("/porempresa/{chaveEmpresa}")
 	public List<Cliente> consultarPorChaveEmpresa(@PathVariable String chaveEmpresa) {
 		return clienteService.consultarPorChaveEmpresa(chaveEmpresa);
 	}
 
-	@ApiOperation(value = "Serviço responsável por atualizar as informações de um cliente no sistema.")
 	@PutMapping("/{id}")
+	@ApiOperation(value = "Serviço responsável por atualizar as informações do cliente no sistema.")
 	public ResponseEntity<Cliente> update(@PathVariable("id") Long id, @RequestBody ClienteRequest request) {
 		clienteService.update(id, request.buildCliente());
 		return ResponseEntity.ok().build();
 	}
 
-	@ApiOperation(value = "Rota responsável por remover(exclusão lógica) de um cliente do sistema.")
 	@DeleteMapping("/{id}")
+	@ApiOperation(value = "Rota responsável por remover(exclusão lógica) um cliente do sistema.")
 	public ResponseEntity<Void> delete(@PathVariable Long id) {
 		clienteService.delete(id);
 		return ResponseEntity.noContent().build();
 	}
-
 }
