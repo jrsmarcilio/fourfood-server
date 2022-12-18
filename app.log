@@ -2098,3 +2098,33 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'EM
 2022-12-18 02:24:23.584  INFO 182015 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-12-18 02:24:23.585  INFO 182015 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-12-18 02:24:23.588  INFO 182015 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-12-18 02:37:11.482  INFO 182015 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2022-12-18 02:37:11.491  INFO 182015 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-18 02:37:11.493  INFO 182015 --- [Thread-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-18 02:37:11.510  INFO 182015 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-18 02:37:11.513  INFO 182015 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-18 02:37:13.817  INFO 182015 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-18 02:37:13.973  INFO 182015 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Starting OxefoodMarcilioApplication using Java 17.0.4.1 on ustore-ideapad with PID 182015 (/home/ustore/git/oxefood-marcilio/target/classes started by ustore in /home/ustore/git/oxefood-marcilio)
+2022-12-18 02:37:13.973  INFO 182015 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-12-18 02:37:14.236  INFO 182015 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-18 02:37:14.260  INFO 182015 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 6 JPA repository interfaces.
+2022-12-18 02:37:14.416  INFO 182015 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-18 02:37:14.417  INFO 182015 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-18 02:37:14.417  INFO 182015 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-18 02:37:14.429  INFO 182015 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-18 02:37:14.429  INFO 182015 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 453 ms
+2022-12-18 02:37:14.448  INFO 182015 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-12-18 02:37:17.069  INFO 182015 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-12-18 02:37:17.070  INFO 182015 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://ec2-54-157-79-121.compute-1.amazonaws.com:5432/dc9mqkn6blhp4f'
+2022-12-18 02:37:17.124  INFO 182015 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-18 02:37:17.131  INFO 182015 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-18 02:37:18.789  INFO 182015 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-18 02:37:18.790  INFO 182015 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-18 02:37:19.304  INFO 182015 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-18 02:37:19.357  WARN 182015 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-18 02:37:19.551  INFO 182015 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-18 02:37:19.777  INFO 182015 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Started OxefoodMarcilioApplication in 5.834 seconds (JVM running for 806.59)
+2022-12-18 02:37:19.781  INFO 182015 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-12-18 02:37:30.289  INFO 182015 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-18 02:37:30.289  INFO 182015 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-18 02:37:30.292  INFO 182015 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
