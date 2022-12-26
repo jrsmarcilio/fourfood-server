@@ -304,3 +304,9 @@ Caused by: java.lang.RuntimeException: Driver org.postgresql.Driver claims to no
 2022-12-26 19:38:17.166 DEBUG 55494 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /api/cliente] with attributes [permitAll]
 2022-12-26 19:38:17.167 DEBUG 55494 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/cliente
 2022-12-26 19:38:23.048 DEBUG 55494 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 19:47:30.260  INFO 55494 --- [RMI TCP Connection(20)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-12-26 19:47:30.264  INFO 55494 --- [RMI TCP Connection(20)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-26 19:47:30.266  INFO 55494 --- [RMI TCP Connection(20)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-26 19:47:30.281  INFO 55494 --- [RMI TCP Connection(20)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-26 19:47:30.283  INFO 55494 --- [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-26 19:47:37.030  INFO 55494 --- [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
