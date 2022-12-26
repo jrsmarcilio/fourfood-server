@@ -18,15 +18,7 @@ public class CategoriaProdutoService extends GenericService {
 	private CategoriaProdutoRepository repository;
 
 	@Transactional
-	public CategoriaProduto save(CategoriaProduto categoriaProduto) {
-		super.validarRegistroVazio(categoriaProduto.getDescricao(), "descrição");
-		this.validarCategoriaProdutoExistente(categoriaProduto, null);
-		super.preencherCamposAuditoria(categoriaProduto);
-		return repository.save(categoriaProduto);
-	}
-
-	@Transactional
-	public CategoriaProduto obterPorCategoriaProdutoId(Long id) {
+	public CategoriaProduto findById(Long id) {
 		return repository.findById(id).get();
 	}
 
@@ -36,18 +28,25 @@ public class CategoriaProdutoService extends GenericService {
 	}
 
 	@Transactional
+	public CategoriaProduto save(CategoriaProduto categoriaProduto) {
+		super.validarRegistroVazio(categoriaProduto.getDescricao(), "descrição");
+		this.validarCategoriaProdutoExistente(categoriaProduto, null);
+		super.preencherCamposAuditoria(categoriaProduto);
+		return repository.save(categoriaProduto);
+	}
+
+	@Transactional
 	public void update(Long id, CategoriaProduto categoriaProdutoAlterado) {
 		validarCategoriaProdutoExistente(categoriaProdutoAlterado, id);
-		CategoriaProduto categoria = this.obterPorCategoriaProdutoId(id);
+		CategoriaProduto categoria = this.findById(id);
 		categoria.updateFrom(categoriaProdutoAlterado);
 		super.preencherCamposAuditoria(categoria);
-
 		repository.save(categoria);
 	}
 
 	@Transactional
 	public void delete(Long id) {
-		CategoriaProduto categoria = this.obterPorCategoriaProdutoId(id);
+		CategoriaProduto categoria = this.findById(id);
 		categoria.setHabilitado(Boolean.FALSE);
 		super.preencherCamposAuditoria(categoria);
 		repository.save(categoria);

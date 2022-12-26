@@ -1,10 +1,7 @@
 package br.com.ifpe.oxefoodmarcilio.servicos.produto;
 
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import br.com.ifpe.oxefoodmarcilio.modelo.produto.Produto;
 import lombok.AllArgsConstructor;
@@ -18,33 +15,32 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ProdutoRequest {
 
-	@NotEmpty
-	@NotNull
+	@NotNull(message = "A identificação da categoria é de preenchimento obrigatório")
+	@NotBlank(message = "A identificação da categoria é de preenchimento obrigatório")
 	private Long idCategoria;
 
-	@JsonIgnore
-	@NotNull
+	@NotNull(message = "O Chave Empresa é de preenchimento obrigatório")
+	@NotBlank(message = "O Chave Empresa é de preenchimento obrigatório")
 	private String chaveEmpresa;
 
-	@Size(max = 255)
-	@NotNull
+	@NotNull(message = "O Chave Empresa é de preenchimento obrigatório")
+	@NotBlank(message = "O Chave Empresa é de preenchimento obrigatório")
 	private String codigo;
-
-	@Size(max = 255)
-	@NotNull
+	
+	@NotNull(message = "O Chave Empresa é de preenchimento obrigatório")
+	@NotBlank(message = "O Chave Empresa é de preenchimento obrigatório")
 	private String titulo;
 
-	@NotNull
-	@NotEmpty
+	@NotNull(message = "O valor unitário é de preenchimento obrigatório")
+	@NotBlank(message = "O valor unitário é de preenchimento obrigatório")
 	double valorUnitario;
 
-	@Size(max = 1000)
-	@NotNull
-	@NotEmpty
+	@NotNull(message = "A descrição é de preenchimento obrigatório")
+	@NotBlank(message = "A descrição é de preenchimento obrigatório")
 	private String descricao;
 
 	public Produto buildProduto() {
-		return Produto.builder().codigo(codigo).chaveEmpresa(chaveEmpresa).descricao(descricao).titulo(titulo)
+		return Produto.builder().chaveEmpresa(chaveEmpresa).codigo(codigo).titulo(titulo).descricao(descricao)
 				.valorUnitario(valorUnitario).build();
 	}
 }

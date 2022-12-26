@@ -35,9 +35,8 @@ public class ProdutoController extends GenericController {
 	@ApiOperation(value = "Serviço responsável por salvar um produto no sistema.")
 	@PostMapping
 	public ResponseEntity<Produto> save(@RequestBody @Valid ProdutoRequest request) {
-		super.validarPreenchimentoChave(request.getChaveEmpresa());
 		Produto produto = request.buildProduto();
-		produto.setCategoria(categoriaProdutoService.obterPorCategoriaProdutoId(request.getIdCategoria()));
+		produto.setCategoria(categoriaProdutoService.findById(request.getIdCategoria()));
 		Produto produtoInserido = produtoService.save(produto);
 		return new ResponseEntity<Produto>(produtoInserido, HttpStatus.CREATED);
 	}
@@ -58,13 +57,12 @@ public class ProdutoController extends GenericController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Produto> update(@PathVariable("id") Long id, @RequestBody ProdutoRequest request) {
 
-	   Produto produto = request.buildProduto();
-	   produto.setCategoria(categoriaProdutoService.obterPorCategoriaProdutoId(request.getIdCategoria()));
-	   Produto produtoAtualizado = produtoService.update(id, produto);
-		
-	   return new ResponseEntity<Produto>(produtoAtualizado, HttpStatus.OK);
-	}
+		Produto produto = request.buildProduto();
+		produto.setCategoria(categoriaProdutoService.findById(request.getIdCategoria()));
+		Produto produtoAtualizado = produtoService.update(id, produto);
 
+		return new ResponseEntity<Produto>(produtoAtualizado, HttpStatus.OK);
+	}
 
 	@ApiOperation(value = "Rota responsável por remover(exclusão lógica) de um produto do sistema.")
 	@DeleteMapping("/{id}")
