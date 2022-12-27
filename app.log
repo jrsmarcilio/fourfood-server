@@ -991,3 +991,227 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 2022-12-26 22:51:33.255 DEBUG 74823 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /api/cliente] with attributes [permitAll]
 2022-12-26 22:51:33.255 DEBUG 74823 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/cliente
 2022-12-26 22:51:40.427 DEBUG 74823 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:57:41.646 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /
+2022-12-26 22:57:41.646 DEBUG 74823 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:57:41.650 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:57:41.658 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /] with attributes [hasAnyAuthority('CLIENTE','EMPRESA')]
+2022-12-26 22:57:41.660 DEBUG 74823 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:57:41.661 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2022-12-26 22:57:41.662 DEBUG 74823 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:57:41.662 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:57:41.662 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /error
+2022-12-26 22:57:41.676 DEBUG 74823 --- [http-nio-8080-exec-3] a.DefaultWebInvocationPrivilegeEvaluator : filter invocation [/error] denied for AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+
+org.springframework.security.access.AccessDeniedException: Access is denied
+	at org.springframework.security.access.vote.AffirmativeBased.decide(AffirmativeBased.java:73) ~[spring-security-core-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.DefaultWebInvocationPrivilegeEvaluator.isAllowed(DefaultWebInvocationPrivilegeEvaluator.java:100) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.DefaultWebInvocationPrivilegeEvaluator.isAllowed(DefaultWebInvocationPrivilegeEvaluator.java:67) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.RequestMatcherDelegatingWebInvocationPrivilegeEvaluator.isAllowed(RequestMatcherDelegatingWebInvocationPrivilegeEvaluator.java:76) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.boot.web.servlet.filter.ErrorPageSecurityFilter.isAllowed(ErrorPageSecurityFilter.java:88) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.web.servlet.filter.ErrorPageSecurityFilter.doFilter(ErrorPageSecurityFilter.java:76) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.web.servlet.filter.ErrorPageSecurityFilter.doFilter(ErrorPageSecurityFilter.java:70) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:106) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:87) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:711) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:385) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:313) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:403) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:249) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-12-26 22:57:41.677 DEBUG 74823 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:30.545  INFO 74823 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2022-12-26 22:59:30.552  INFO 74823 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-26 22:59:30.553  INFO 74823 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-26 22:59:30.579  INFO 74823 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-26 22:59:30.580  INFO 74823 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-12-26 22:59:32.170  INFO 74823 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-12-26 22:59:32.322  INFO 74823 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Starting OxefoodMarcilioApplication using Java 17.0.4.1 on ustore-ideapad with PID 74823 (/home/ustore/git/oxefood-marcilio/target/classes started by ustore in /home/ustore/git/oxefood-marcilio)
+2022-12-26 22:59:32.323  INFO 74823 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-12-26 22:59:32.656  INFO 74823 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-26 22:59:32.685  INFO 74823 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 7 JPA repository interfaces.
+2022-12-26 22:59:32.948  INFO 74823 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-26 22:59:32.949  INFO 74823 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-26 22:59:32.949  INFO 74823 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-26 22:59:32.962  INFO 74823 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-26 22:59:32.962  INFO 74823 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 636 ms
+2022-12-26 22:59:32.998  INFO 74823 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-12-26 22:59:34.730  INFO 74823 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-12-26 22:59:34.731  INFO 74823 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://ec2-52-73-155-171.compute-1.amazonaws.com:5432/d851creg3i6tjr'
+2022-12-26 22:59:34.818  INFO 74823 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-26 22:59:34.824  INFO 74823 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-26 22:59:37.350  INFO 74823 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-26 22:59:37.350  INFO 74823 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-26 22:59:38.342 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-resources/**']
+2022-12-26 22:59:38.343 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-ui.html']
+2022-12-26 22:59:38.343 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger*/**']
+2022-12-26 22:59:38.343 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/v2/api-docs']
+2022-12-26 22:59:38.343 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/webjars/**']
+2022-12-26 22:59:38.343 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/routes/**']
+2022-12-26 22:59:38.344 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+2022-12-26 22:59:38.344 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/ws/**']
+2022-12-26 22:59:38.344 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/**/dadosPedidoNew/**']
+2022-12-26 22:59:38.344 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/image/**']
+2022-12-26 22:59:38.344 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente', POST]
+2022-12-26 22:59:38.344 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/login/signin', POST]
+2022-12-26 22:59:38.344 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/', GET]
+2022-12-26 22:59:38.344 DEBUG 74823 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasAnyAuthority('CLIENTE','EMPRESA')] for any request
+2022-12-26 22:59:38.350  INFO 74823 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48032f19, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24e43f37, org.springframework.security.web.context.SecurityContextPersistenceFilter@27a3c585, org.springframework.security.web.header.HeaderWriterFilter@66b229e5, org.springframework.web.filter.CorsFilter@48605974, org.springframework.security.web.authentication.logout.LogoutFilter@468345d1, br.com.ifpe.oxefoodmarcilio.security.jwt.JwtTokenAuthenticationFilter@4810356b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d57779, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74df8be7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19bab097, org.springframework.security.web.session.SessionManagementFilter@3ac634ff, org.springframework.security.web.access.ExceptionTranslationFilter@2871947c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65dca586]
+2022-12-26 22:59:38.408  INFO 74823 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-26 22:59:38.502  WARN 74823 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-26 22:59:38.783  INFO 74823 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-26 22:59:39.007  INFO 74823 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Started OxefoodMarcilioApplication in 6.718 seconds (JVM running for 1218.877)
+2022-12-26 22:59:39.010  INFO 74823 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-12-26 22:59:44.607  INFO 74823 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-26 22:59:44.607  INFO 74823 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-26 22:59:44.611  INFO 74823 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-12-26 22:59:44.612 DEBUG 74823 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /
+2022-12-26 22:59:44.612 DEBUG 74823 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:44.614 DEBUG 74823 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:44.615 DEBUG 74823 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /] with attributes [permitAll]
+2022-12-26 22:59:44.615 DEBUG 74823 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /
+2022-12-26 22:59:44.622 DEBUG 74823 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:44.629 DEBUG 74823 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui.html
+2022-12-26 22:59:44.629 DEBUG 74823 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:44.637 DEBUG 74823 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:44.637 DEBUG 74823 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /swagger-ui.html] with attributes [permitAll]
+2022-12-26 22:59:44.637 DEBUG 74823 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui.html
+2022-12-26 22:59:44.644 DEBUG 74823 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:44.705 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /webjars/springfox-swagger-ui/springfox.css?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:44.706 DEBUG 74823 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:44.708 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:44.709 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /webjars/springfox-swagger-ui/springfox.css?v=2.8.0-SNAPSHOT] with attributes [permitAll]
+2022-12-26 22:59:44.709 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /webjars/springfox-swagger-ui/springfox.css?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:44.721 DEBUG 74823 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:44.722 DEBUG 74823 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /webjars/springfox-swagger-ui/swagger-ui.css?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:44.722 DEBUG 74823 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /webjars/springfox-swagger-ui/swagger-ui-bundle.js?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:44.722 DEBUG 74823 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:44.722 DEBUG 74823 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:44.724 DEBUG 74823 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:44.724 DEBUG 74823 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:44.724 DEBUG 74823 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /webjars/springfox-swagger-ui/swagger-ui-bundle.js?v=2.8.0-SNAPSHOT] with attributes [permitAll]
+2022-12-26 22:59:44.724 DEBUG 74823 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /webjars/springfox-swagger-ui/swagger-ui-bundle.js?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:44.724 DEBUG 74823 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /webjars/springfox-swagger-ui/swagger-ui.css?v=2.8.0-SNAPSHOT] with attributes [permitAll]
+2022-12-26 22:59:44.725 DEBUG 74823 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /webjars/springfox-swagger-ui/swagger-ui.css?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:44.729 DEBUG 74823 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /webjars/springfox-swagger-ui/springfox.js?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:44.730 DEBUG 74823 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:44.730 DEBUG 74823 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:44.730 DEBUG 74823 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:44.731 DEBUG 74823 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:44.731 DEBUG 74823 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:44.732 DEBUG 74823 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js?v=2.8.0-SNAPSHOT] with attributes [permitAll]
+2022-12-26 22:59:44.732 DEBUG 74823 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:44.732 DEBUG 74823 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /webjars/springfox-swagger-ui/springfox.js?v=2.8.0-SNAPSHOT] with attributes [permitAll]
+2022-12-26 22:59:44.734 DEBUG 74823 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /webjars/springfox-swagger-ui/springfox.js?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:44.746 DEBUG 74823 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:44.753 DEBUG 74823 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:44.763 DEBUG 74823 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:44.790 DEBUG 74823 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:45.242 DEBUG 74823 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /swagger-resources/configuration/ui
+2022-12-26 22:59:45.242 DEBUG 74823 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:45.244 DEBUG 74823 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:45.244 DEBUG 74823 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /swagger-resources/configuration/ui] with attributes [permitAll]
+2022-12-26 22:59:45.244 DEBUG 74823 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /swagger-resources/configuration/ui
+2022-12-26 22:59:45.252 DEBUG 74823 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /webjars/springfox-swagger-ui/favicon-32x32.png?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:45.252 DEBUG 74823 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:45.255 DEBUG 74823 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:45.255 DEBUG 74823 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /webjars/springfox-swagger-ui/favicon-32x32.png?v=2.8.0-SNAPSHOT] with attributes [permitAll]
+2022-12-26 22:59:45.255 DEBUG 74823 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /webjars/springfox-swagger-ui/favicon-32x32.png?v=2.8.0-SNAPSHOT
+2022-12-26 22:59:45.262 DEBUG 74823 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:45.264 DEBUG 74823 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:45.282 DEBUG 74823 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /swagger-resources/configuration/security
+2022-12-26 22:59:45.282 DEBUG 74823 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:45.283 DEBUG 74823 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:45.283 DEBUG 74823 --- [http-nio-8080-exec-10] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /swagger-resources/configuration/security] with attributes [permitAll]
+2022-12-26 22:59:45.283 DEBUG 74823 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /swagger-resources/configuration/security
+2022-12-26 22:59:45.287 DEBUG 74823 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:45.315 DEBUG 74823 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-resources
+2022-12-26 22:59:45.315 DEBUG 74823 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:45.315 DEBUG 74823 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:45.316 DEBUG 74823 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /swagger-resources] with attributes [permitAll]
+2022-12-26 22:59:45.316 DEBUG 74823 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-resources
+2022-12-26 22:59:45.321 DEBUG 74823 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:45.376 DEBUG 74823 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /v2/api-docs
+2022-12-26 22:59:45.376 DEBUG 74823 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:45.377 DEBUG 74823 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:45.378 DEBUG 74823 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /v2/api-docs] with attributes [permitAll]
+2022-12-26 22:59:45.378 DEBUG 74823 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /v2/api-docs
+2022-12-26 22:59:45.403 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-700.woff2
+2022-12-26 22:59:45.403 DEBUG 74823 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:45.405 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:45.405 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-700.woff2] with attributes [permitAll]
+2022-12-26 22:59:45.405 DEBUG 74823 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-700.woff2
+2022-12-26 22:59:45.412 DEBUG 74823 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:45.575 DEBUG 74823 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:45.830 DEBUG 74823 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2
+2022-12-26 22:59:45.830 DEBUG 74823 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-300.woff2
+2022-12-26 22:59:45.830 DEBUG 74823 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-700.woff2
+2022-12-26 22:59:45.830 DEBUG 74823 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:45.830 DEBUG 74823 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:45.830 DEBUG 74823 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-12-26 22:59:45.831 DEBUG 74823 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:45.831 DEBUG 74823 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:45.831 DEBUG 74823 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-12-26 22:59:45.832 DEBUG 74823 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2] with attributes [permitAll]
+2022-12-26 22:59:45.832 DEBUG 74823 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-700.woff2] with attributes [permitAll]
+2022-12-26 22:59:45.832 DEBUG 74823 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-300.woff2] with attributes [permitAll]
+2022-12-26 22:59:45.832 DEBUG 74823 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2
+2022-12-26 22:59:45.832 DEBUG 74823 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-700.woff2
+2022-12-26 22:59:45.832 DEBUG 74823 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-300.woff2
+2022-12-26 22:59:45.846 DEBUG 74823 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:45.846 DEBUG 74823 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-12-26 22:59:45.846 DEBUG 74823 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request

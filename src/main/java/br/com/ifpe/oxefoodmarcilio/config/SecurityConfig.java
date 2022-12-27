@@ -66,7 +66,7 @@ public class SecurityConfig {
 	 	.antMatchers(AUTH_WHITELIST).permitAll()
 	 	.antMatchers(HttpMethod.POST, "/api/cliente").permitAll()
 	 	.antMatchers(HttpMethod.POST, "/api/login/signin").permitAll()
-        
+	 	.antMatchers(HttpMethod.GET, "/").permitAll()
         	.anyRequest().hasAnyAuthority(Usuario.ROLE_CLIENTE, Usuario.ROLE_EMPRESA)
         	.and().addFilterBefore(
         		new JwtTokenAuthenticationFilter(jwtTokenProvider),
