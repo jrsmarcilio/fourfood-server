@@ -8,6 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.ifpe.oxefoodmarcilio.modelo.acesso.UsuarioService;
 import br.com.ifpe.oxefoodmarcilio.util.entity.GenericService;
 import br.com.ifpe.oxefoodmarcilio.util.exception.EntityAlreadyExistsException;
 
@@ -16,10 +17,12 @@ public class EmpresaService extends GenericService {
 	@Autowired
 	private EmpresaRepository repository;
 
+	@Autowired
+	private UsuarioService usuarioService;
+
 	@Transactional
 	public Empresa save(Empresa empresa) {
-		super.validarRegistroVazio(empresa.getNomeEmpresarial(), "nomeEmpresarial");
-		this.validarEmpresaExistente(empresa, null);
+		usuarioService.save(empresa.getUsuario());
 		super.preencherCamposAuditoria(empresa);
 		return repository.save(empresa);
 	}

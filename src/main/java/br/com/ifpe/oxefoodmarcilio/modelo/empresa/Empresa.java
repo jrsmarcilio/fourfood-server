@@ -2,6 +2,8 @@ package br.com.ifpe.oxefoodmarcilio.modelo.empresa;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -9,6 +11,7 @@ import org.hibernate.annotations.Where;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import br.com.ifpe.oxefoodmarcilio.modelo.acesso.Usuario;
 import br.com.ifpe.oxefoodmarcilio.util.entity.EntidadeAuditavel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -33,6 +36,10 @@ public class Empresa extends EntidadeAuditavel {
 	@NotNull
 	@Column(nullable = false)
 	private String chave;
+	
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Usuario usuario;
 	
 	@NotNull
 	@Column(nullable = false, length = 100)

@@ -36,9 +36,10 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Usuario extends EntidadeNegocio implements UserDetails {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 6339864833492384866L;
 	public static final String ROLE_CLIENTE = "CLIENTE";
-	public static final String ROLE_EMPRESA = "EMPRESA";
+    public static final String ROLE_EMPRESA_ADMIN = "EMPRESA_ADMIN";
+    public static final String ROLE_EMPRESA_USER = "EMPRESA_USER";
 
 	@Column(nullable = false, unique = true)
 	private String username;

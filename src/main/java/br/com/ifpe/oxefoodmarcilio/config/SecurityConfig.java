@@ -25,65 +25,66 @@ import br.com.ifpe.oxefoodmarcilio.security.jwt.JwtTokenProvider;
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true)
 public class SecurityConfig {
 
-    private static final String[] AUTH_WHITELIST = {
-		"/swagger-resources/**",
-		"/swagger-ui.html",
-		"/swagger*/**",
-		"/v2/api-docs",
-		"/webjars/**",
-		"/routes/**",
-		"/favicon.ico",
-		"/ws/**",
-		"/delifacil/**/dadosPedidoNew/**",
-		"/delifacil/image/**"
-    };
-    
-    @Autowired
-    private JwtTokenProvider jwtTokenProvider;
-
-    @Autowired
-    private JwtAuthenticationEntryPoint authenticationEntryPoint;
-    
-    @Bean
-    public AuthenticationManager authenticationManager(HttpSecurity http, BCryptPasswordEncoder bCryptPasswordEncoder,
-	    UsuarioService userDetailService) throws Exception {
-	
-	return http.getSharedObject(AuthenticationManagerBuilder.class)
-		.userDetailsService(userDetailService)
-		.passwordEncoder(bCryptPasswordEncoder)
-		.and()
-		.build();
-    }
-    
-    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-	
-	 http
-	 	.httpBasic().disable().csrf().disable().cors().and().sessionManagement()
-	 	.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().exceptionHandling()
-	 	.authenticationEntryPoint(authenticationEntryPoint).and().authorizeRequests()
-
-	 	.antMatchers(AUTH_WHITELIST).permitAll()
-	 	.antMatchers(HttpMethod.POST, "/api/cliente").permitAll()
-	 	.antMatchers(HttpMethod.POST, "/api/login/signin").permitAll()
-	 	.antMatchers(HttpMethod.GET, "/").permitAll()
-        	.anyRequest().hasAnyAuthority(Usuario.ROLE_CLIENTE, Usuario.ROLE_EMPRESA)
-        	.and().addFilterBefore(
-        		new JwtTokenAuthenticationFilter(jwtTokenProvider),
-        		UsernamePasswordAuthenticationFilter.class);
-	 
-	 return http.build();
-    }
-    
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-
-	return new WebMvcConfigurer() {
-	    @Override
-	    public void addCorsMappings(CorsRegistry registry) {
-		registry.addMapping("/**").allowedOrigins("*");
-	    }
+	private static final String[] AUTH_WHITELIST = {
+			"/swagger-resources/**",
+			"/swagger-ui.html",
+			"/swagger*/**",
+			"/v2/api-docs",
+			"/webjars/**",
+			"/routes/**",
+			"/favicon.ico",
+			"/ws/**",
+			"/delifacil/**/dadosPedidoNew/**",
+			"/delifacil/image/**"
 	};
-    }
-    
+
+	@Autowired
+	private JwtTokenProvider jwtTokenProvider;
+
+	@Autowired
+	private JwtAuthenticationEntryPoint authenticationEntryPoint;
+
+	@Bean
+	public AuthenticationManager authenticationManager(HttpSecurity http, BCryptPasswordEncoder bCryptPasswordEncoder,
+			UsuarioService userDetailService) throws Exception {
+
+		return http.getSharedObject(AuthenticationManagerBuilder.class).userDetailsService(userDetailService)
+				.passwordEncoder(bCryptPasswordEncoder).and().build();
+	}
+
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
+		http.httpBasic().disable().csrf().disable().cors().and().sessionManagement()
+				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().exceptionHandling()
+				.authenticationEntryPoint(authenticationEntryPoint).and().authorizeRequests()
+				.antMatchers(AUTH_WHITELIST).permitAll()
+				.antMatchers(HttpMethod.POST, "/api/cliente").permitAll()
+				.antMatchers(HttpMethod.POST, "/api/empresa").permitAll()
+				.antMatchers(HttpMethod.POST, "/api/login/signin").permitAll()
+				.antMatchers(HttpMethod.GET, "/").permitAll()
+				.antMatchers(HttpMethod.POST, "/api/produto")
+				.hasAnyAuthority(Usuario.ROLE_EMPRESA_ADMIN, Usuario.ROLE_EMPRESA_USER)
+				.antMatchers(HttpMethod.PUT, "/api/produto")
+				.hasAnyAuthority(Usuario.ROLE_EMPRESA_ADMIN, Usuario.ROLE_EMPRESA_USER)
+				.antMatchers(HttpMethod.DELETE, "/api/produto")
+				.hasAnyAuthority(Usuario.ROLE_EMPRESA_ADMIN)
+				.antMatchers(HttpMethod.GET, "/api/produto/")
+				.hasAnyAuthority(Usuario.ROLE_CLIENTE, Usuario.ROLE_EMPRESA_ADMIN, Usuario.ROLE_EMPRESA_USER).anyRequest()
+				.hasAnyAuthority(Usuario.ROLE_CLIENTE, Usuario.ROLE_EMPRESA_ADMIN).and().addFilterBefore(
+						new JwtTokenAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class);
+
+		return http.build();
+	}
+
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**").allowedOrigins("*");
+			}
+		};
+	}
+
 }
