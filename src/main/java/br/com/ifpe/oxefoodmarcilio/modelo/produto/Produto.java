@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.Where;
 
@@ -36,32 +35,38 @@ public class Produto extends EntidadeAuditavel {
 	private CategoriaProduto categoria;
 
 	@JsonIgnore
-	@NotNull
-	@Column(nullable = false)
+	@Column
 	private String chaveEmpresa;
 
-	@NotNull
-	@Column(nullable = false, length = 100)
+	@Column
 	private String codigo;
 
-	@NotNull
-	@Column(nullable = false, length = 100)
+	@Column(length = 300, nullable = false)
 	private String titulo;
 
-	@NotNull
-	@Column(nullable = false, length = 100)
+	@Column(length = 100000)
 	private String descricao;
 
-	@NotNull
 	@Column(nullable = false)
-	double valorUnitario;
+	private double valorUnitario;
+
+	@Column(length = 50)
+	private String tempoEntrega;
+
+	@Column
+	private Boolean temComplemento;
+
+	@Column
+	private Boolean emDestaque;
 
 	public void updateFrom(Produto param) {
 		this.setCategoria(param.getCategoria());
-		this.setChaveEmpresa(param.getChaveEmpresa());
-		this.setCodigo(param.getCodigo());
 		this.setTitulo(param.getTitulo());
+		this.setCodigo(param.getCodigo());
 		this.setDescricao(param.getDescricao());
 		this.setValorUnitario(param.getValorUnitario());
+		this.setTempoEntrega(param.getTempoEntrega());
+		this.setTemComplemento(param.getTemComplemento());
+		this.setEmDestaque(param.getEmDestaque());
 	}
 }

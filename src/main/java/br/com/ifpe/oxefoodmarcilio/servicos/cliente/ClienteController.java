@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/api/cliente")
 public class ClienteController extends GenericController {
 
@@ -37,6 +39,12 @@ public class ClienteController extends GenericController {
 		return new ResponseEntity<Cliente>(clienteSalvo, HttpStatus.CREATED);
 	}
 
+	@GetMapping
+	public List<Cliente> clientes() {
+		System.out.println("Bateu ");
+		return clienteService.obterTodosClientes();
+	}
+	
 	@ApiOperation(value = "Serviço responsável por obter um cliente referente ao Id passado na URL.")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Retorna o cliente."),
 			@ApiResponse(code = 401, message = "Acesso não autorizado."),
@@ -45,6 +53,7 @@ public class ClienteController extends GenericController {
 			@ApiResponse(code = 500, message = "Foi gerado um erro no servidor."), })
 	@GetMapping("/{id}")
 	public Cliente obterClientePorID(@PathVariable Long id) {
+		System.out.println(id);
 		return clienteService.obterClientePorID(id);
 	}
 

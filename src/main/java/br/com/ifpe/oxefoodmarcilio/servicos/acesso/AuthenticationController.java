@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ifpe.oxefoodmarcilio.modelo.acesso.Usuario;
 import br.com.ifpe.oxefoodmarcilio.modelo.acesso.UsuarioService;
+import br.com.ifpe.oxefoodmarcilio.modelo.cliente.ClienteService;
+import br.com.ifpe.oxefoodmarcilio.modelo.empresa.EmpresaService;
 import br.com.ifpe.oxefoodmarcilio.security.jwt.JwtTokenProvider;
 import br.com.ifpe.oxefoodmarcilio.util.entity.GenericController;
 

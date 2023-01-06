@@ -1,16 +1,17 @@
 version: "3"
 services:
 
-   db:
-     image: postgres
-     restart: always
-     environment:
-       POSTGRES_PASSWORD: oxefood
-       POSTGRES_DB: oxefood
-     ports:
-       - 5438:5432
-     volumes:
-       - postgres_data:/var/lib/postgresql/data
+  postgres:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: banco
+      POSTGRES_DB: fourfood
+    ports:
+      - 5432:5432
 
 volumes:
     postgres_data: {}
+
+    
