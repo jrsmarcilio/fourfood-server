@@ -32,6 +32,7 @@ public class ClienteController extends GenericController {
 	@Autowired
 	private ClienteService clienteService;
 
+	@ApiOperation(value = "Serviço responsável por salvar um cliente no sistema.")
 	@PostMapping
 	public ResponseEntity<Cliente> save(@RequestBody @Valid ClienteRequest request) {
 		Cliente clienteRequisicao = request.buildCliente();
@@ -39,9 +40,9 @@ public class ClienteController extends GenericController {
 		return new ResponseEntity<Cliente>(clienteSalvo, HttpStatus.CREATED);
 	}
 
+	@ApiOperation(value = "Serviço responsável por obter todos os cliente cadastrados.")
 	@GetMapping
 	public List<Cliente> clientes() {
-		System.out.println("Bateu ");
 		return clienteService.obterTodosClientes();
 	}
 	

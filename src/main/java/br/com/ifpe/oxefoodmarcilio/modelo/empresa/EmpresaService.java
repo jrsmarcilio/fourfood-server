@@ -68,4 +68,8 @@ public class EmpresaService extends GenericService {
 			}
 		}
 	}
+
+	public List<Empresa> obterTodasEmpresas() {
+		return repository.findAll();
+	}
 }

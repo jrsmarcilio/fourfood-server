@@ -73,4 +73,8 @@ public class ProdutoService extends GenericService {
 			}
 		}
 	}
+
+	public List<Produto> obterTodosProdutos() {
+		return repository.findAll();
+	}
 }

@@ -41,6 +41,12 @@ public class ProdutoController extends GenericController {
 		return new ResponseEntity<Produto>(produtoInserido, HttpStatus.CREATED);
 	}
 
+	@ApiOperation(value = "Serviço responsável por obter todos os produto cadastrados.")
+	@GetMapping("/{id}")
+	public List<Produto> produtos() {
+		return produtoService.obterTodosProdutos();
+	}
+	
 	@ApiOperation(value = "Serviço responsável por obter um produto referente ao Id passado na URL.")
 	@GetMapping("/{id}")
 	public Produto get(@PathVariable Long id) {

@@ -55,6 +55,11 @@ public class EmpresaController extends GenericController {
 		return empresaService.findById(id);
 	}
 
+	@ApiOperation(value = "Serviço responsável por obter todas as empresa cadastradas.")
+	public List<Empresa> empresas() {
+		return empresaService.obterTodasEmpresas();
+	}
+	
 	@ApiOperation(value = "Serviço responsável por obter uma empresa referente a chave passada na URL.")
 	@GetMapping("/porchave/{chave}")
 	public List<Empresa> consultarPorChave(@PathVariable String chave) {

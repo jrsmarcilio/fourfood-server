@@ -43,7 +43,7 @@ public class CupomDescontoController extends GenericController {
 		return service.findById(id);
 	}
 	
-	@ApiOperation(value = "Serviço responsável por obter um cupom de desconto referente a chave passada na URL.")
+	@ApiOperation(value = "Serviço responsável por obter todos os cupons de desconto cadastrados.")
 	@GetMapping
 	public List<CupomDesconto> consultar() {
 		return service.consultar();
