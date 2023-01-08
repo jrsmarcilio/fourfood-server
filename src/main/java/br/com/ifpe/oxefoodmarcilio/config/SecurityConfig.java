@@ -78,6 +78,7 @@ public class SecurityConfig {
 
 	 	.antMatchers(HttpMethod.POST, "/api/empresa").permitAll()
 	 	.antMatchers(HttpMethod.DELETE, "/api/empresa/*").permitAll()
+	 	.antMatchers(HttpMethod.GET, "/api/empresa/**").permitAll()
 	 	
 	 	//Configuração de autorizações de acesso para Endereco
 	 	
@@ -103,7 +104,7 @@ public class SecurityConfig {
 	 	.antMatchers(HttpMethod.POST, "/api/produto").permitAll()
 	 	.antMatchers(HttpMethod.PUT, "/api/produto").permitAll()
 	 	.antMatchers(HttpMethod.DELETE, "/api/produto").permitAll()
-	 	.antMatchers(HttpMethod.GET, "/api/produto/").permitAll()
+	 	.antMatchers(HttpMethod.GET, "/api/produto/**").permitAll()
 	 	
 //	 	.antMatchers(AUTH_WHITELIST).permitAll()
 //	 	.antMatchers(HttpMethod.POST, "/api/login/signin").permitAll()
