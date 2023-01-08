@@ -42,7 +42,7 @@ public class ProdutoController extends GenericController {
 	}
 
 	@ApiOperation(value = "Serviço responsável por obter todos os produto cadastrados.")
-	@GetMapping("/{id}")
+	@GetMapping
 	public List<Produto> produtos() {
 		return produtoService.obterTodosProdutos();
 	}
