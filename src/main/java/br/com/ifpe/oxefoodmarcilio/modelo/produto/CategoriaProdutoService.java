@@ -67,4 +67,8 @@ public class CategoriaProdutoService extends GenericService {
 			}
 		}
 	}
+
+	public List<CategoriaProduto> obterTodasCategorias() {
+		return repository.findAll();
+	}
 }

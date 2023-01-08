@@ -49,6 +49,12 @@ public class CategoriaProdutoController extends GenericController {
 		return categoriaProdutoService.findById(id);
 	}
 
+	@ApiOperation(value = "Serviço responsável por obter uma lista de categorias de produto cadastradas.")
+	@GetMapping
+	public List<CategoriaProduto> categorias() {
+		return categoriaProdutoService.obterTodasCategorias();
+	}
+	
 	@ApiOperation(value = "Serviço responsável por obter uma lista de categorias de produto da empresa passado na URL.")
 	@GetMapping("/porempresa/{chaveEmpresa}")
 	public List<CategoriaProduto> consultarPorChaveEmpresa(@PathVariable String chaveEmpresa) {

@@ -56,6 +56,7 @@ public class EmpresaController extends GenericController {
 	}
 
 	@ApiOperation(value = "Serviço responsável por obter todas as empresa cadastradas.")
+	@GetMapping
 	public List<Empresa> empresas() {
 		return empresaService.obterTodasEmpresas();
 	}
