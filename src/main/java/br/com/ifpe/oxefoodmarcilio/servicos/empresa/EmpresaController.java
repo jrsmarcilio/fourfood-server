@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ifpe.oxefoodmarcilio.modelo.acesso.Usuario;
+import br.com.ifpe.oxefoodmarcilio.modelo.empresa.CategoriaEmpresaService;
 import br.com.ifpe.oxefoodmarcilio.modelo.empresa.Empresa;
 import br.com.ifpe.oxefoodmarcilio.modelo.empresa.EmpresaService;
 import br.com.ifpe.oxefoodmarcilio.util.entity.GenericController;
@@ -30,6 +31,9 @@ public class EmpresaController extends GenericController {
 
 	@Autowired
 	private EmpresaService empresaService;
+
+	@Autowired
+	private CategoriaEmpresaService categoriaEmpresaService;
 
 	@ApiOperation(value = "Serviço responsável por salvar uma empresa no sistema.")
 	@PostMapping
@@ -44,6 +48,8 @@ public class EmpresaController extends GenericController {
 				empresa.getUsuario().getRoles().add(Usuario.ROLE_EMPRESA_ADMIN);
 			}
 		}
+
+		empresa.setCategoria(categoriaEmpresaService.findById(request.getIdCategoria()));
 
 		Empresa empresaCriada = empresaService.save(empresa);
 		return new ResponseEntity<Empresa>(empresaCriada, HttpStatus.CREATED);
@@ -60,6 +66,12 @@ public class EmpresaController extends GenericController {
 	public List<Empresa> empresas() {
 		return empresaService.obterTodasEmpresas();
 	}
+
+	@ApiOperation(value = "Serviço responsável por obter uma lista de empresa referente ao id passada na URL.")
+	@GetMapping("/porcategoria/{id}")
+	public List<Empresa> consultarPorIdCategoria(@PathVariable Long id) {
+		return empresaService.obterEmpresasPorCategoriaId(id);
+	}
 	
 	@ApiOperation(value = "Serviço responsável por obter uma empresa referente a chave passada na URL.")
 	@GetMapping("/porchave/{chave}")
@@ -70,7 +82,9 @@ public class EmpresaController extends GenericController {
 	@ApiOperation(value = "Serviço responsável por atualizar as informações de uma empresa no sistema.")
 	@PutMapping("/{id}")
 	public ResponseEntity<Empresa> update(@PathVariable("id") Long id, @RequestBody EmpresaRequest request) {
-		empresaService.update(id, request.buildEmpresa());
+		Empresa empresa = request.buildEmpresa();
+		empresa.setCategoria(categoriaEmpresaService.findById(id));
+		empresaService.update(id, empresa);
 		return ResponseEntity.ok().build();
 	}
 

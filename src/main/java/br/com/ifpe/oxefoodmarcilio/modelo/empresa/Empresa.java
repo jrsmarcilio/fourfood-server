@@ -41,6 +41,10 @@ public class Empresa extends EntidadeAuditavel {
     @JoinColumn(nullable = false)
     private Usuario usuario;
 	
+	@ManyToOne
+	@JoinColumn
+	private CategoriaEmpresa categoria;
+    
 	@NotNull
 	@Column(nullable = false, length = 100)
 	private String site;

@@ -57,6 +57,8 @@ public class EmpresaRequest {
 	private String password;
 
 	private String perfil;
+	
+    private Long idCategoria;
 
 	public Empresa buildEmpresa() {
 		return Empresa.builder().chave(chave).site(site).cnpj(cnpj).usuario(buildUsuario())

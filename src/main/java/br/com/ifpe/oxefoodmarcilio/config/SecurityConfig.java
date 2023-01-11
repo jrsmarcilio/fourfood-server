@@ -84,6 +84,13 @@ public class SecurityConfig {
 	 	
 	 	.antMatchers(HttpMethod.POST, "/api/enderecocliente/**").permitAll()
 	 
+	 	//Configuração de autorizações de acesso para Categoria Empresa
+	 	
+	 	.antMatchers(HttpMethod.POST, "/api/categoriaempresa").permitAll()
+	 	.antMatchers(HttpMethod.GET, "/api/categoriaempresa/**").permitAll()
+	 	.antMatchers(HttpMethod.PUT, "/api/categoriaempresa/*").permitAll()
+	 	.antMatchers(HttpMethod.DELETE, "/api/categoriaempresa/*").permitAll()
+	 	
 	 	//Configuração de autorizações de acesso para Categoria Produto
 	 	
 	 	.antMatchers(HttpMethod.POST, "/api/categoriaproduto").permitAll()

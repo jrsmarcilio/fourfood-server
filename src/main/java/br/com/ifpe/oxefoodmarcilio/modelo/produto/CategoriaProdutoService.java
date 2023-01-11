@@ -68,6 +68,7 @@ public class CategoriaProdutoService extends GenericService {
 		}
 	}
 
+	@Transactional
 	public List<CategoriaProduto> obterTodasCategorias() {
 		return repository.findAll();
 	}

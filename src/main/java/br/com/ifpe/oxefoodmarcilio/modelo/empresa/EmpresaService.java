@@ -14,6 +14,7 @@ import br.com.ifpe.oxefoodmarcilio.util.exception.EntityAlreadyExistsException;
 
 @Service
 public class EmpresaService extends GenericService {
+
 	@Autowired
 	private EmpresaRepository repository;
 
@@ -69,7 +70,14 @@ public class EmpresaService extends GenericService {
 		}
 	}
 
+	@Transactional
 	public List<Empresa> obterTodasEmpresas() {
 		return repository.findAll();
 	}
+	
+	@Transactional
+	public List<Empresa> obterEmpresasPorCategoriaId(Long id) {
+		return repository.findByCategoriaId(id);
+	}
+
 }
