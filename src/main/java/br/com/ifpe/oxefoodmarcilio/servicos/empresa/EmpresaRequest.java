@@ -55,10 +55,12 @@ public class EmpresaRequest {
 
 	@NotBlank(message = "A senha é de preenchimento obrigatório")
 	private String password;
-
-	private String perfil;
 	
-    private Long idCategoria;
+	@NotNull(message = "O perfil é de preenchimento obrigatório")
+	@NotBlank(message = "O perfil é de preenchimento obrigatório")
+	private String perfil;
+
+	private Long idCategoria;
 
 	public Empresa buildEmpresa() {
 		return Empresa.builder().chave(chave).site(site).cnpj(cnpj).usuario(buildUsuario())

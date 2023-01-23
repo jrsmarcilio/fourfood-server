@@ -35,7 +35,7 @@ public class ProdutoService extends GenericService {
 
 	@Transactional
 	public List<Produto> consultarPorChaveEmpresa(String chaveEmpresa) {
-		return repository.findByChaveEmpresaOrderByDescricaoAsc(chaveEmpresa);
+		return repository.findByEmpresaOrderByDescricaoAsc(chaveEmpresa);
 	}
 
 	@Transactional
@@ -60,8 +60,10 @@ public class ProdutoService extends GenericService {
 
 	private void validarProdutoExistente(Produto produtoParam, Long id) {
 		if (StringUtils.isNotBlank(produtoParam.getDescricao())) {
-			Produto produto = repository.findByChaveAndDescricao(produtoParam.getChaveEmpresa(),
-					produtoParam.getDescricao());
+			Produto produto = repository.findByEmpresaAndDescricaoOrderByDescricaoAsc(
+					produtoParam.getEmpresa().getChave(),
+					produtoParam.getDescricao()
+			);
 			if (id == null) {
 				if (produto != null) {
 					throw new EntityAlreadyExistsException(Produto.LABEL, "Descrição");

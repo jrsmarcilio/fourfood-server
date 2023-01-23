@@ -23,8 +23,8 @@ public class CategoriaProdutoService extends GenericService {
 	}
 
 	@Transactional
-	public List<CategoriaProduto> consultarPorChaveEmpresa(String chaveEmpresa) {
-		return repository.findByChaveEmpresaOrderByDescricaoAsc(chaveEmpresa);
+	public List<CategoriaProduto> obterTodasCategorias() {
+		return repository.findAll();
 	}
 
 	@Transactional
@@ -61,15 +61,10 @@ public class CategoriaProdutoService extends GenericService {
 					throw new EntityAlreadyExistsException(CategoriaProduto.LABEL, "Descrição");
 				}
 			} else {
-				if (categoria != null && categoria.getId() != id) {
+				if (categoria != null && categoria.getId().equals(id)) {
 					throw new EntityAlreadyExistsException(CategoriaProduto.LABEL, "Descrição");
 				}
 			}
 		}
-	}
-
-	@Transactional
-	public List<CategoriaProduto> obterTodasCategorias() {
-		return repository.findAll();
 	}
 }

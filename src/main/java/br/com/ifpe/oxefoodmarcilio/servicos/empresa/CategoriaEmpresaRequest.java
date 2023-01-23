@@ -16,16 +16,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CategoriaEmpresaRequest {
 
-	@NotNull(message = "O Chave Empresa é de preenchimento obrigatório")
-	@NotBlank(message = "O Chave Empresa é de preenchimento obrigatório")
-	private String chaveEmpresa;
-
 	@Size(max = 1000)
 	@NotNull(message = "A descrição é de preenchimento obrigatório")
 	@NotBlank(message = "A descrição é de preenchimento obrigatório")
 	private String descricao;
 
+	@Size(max = 1000)
+	@NotNull(message = "A imagem é de preenchimento obrigatório")
+	@NotBlank(message = "A imagem é de preenchimento obrigatório")
+	private String imagem;
+
 	public CategoriaEmpresa buildCategoriaEmpresa() {
-		return CategoriaEmpresa.builder().chaveEmpresa(chaveEmpresa).descricao(descricao).build();
+		return CategoriaEmpresa.builder().descricao(descricao).imagem(imagem).build();
 	}
 }

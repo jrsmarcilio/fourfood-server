@@ -18,5 +18,11 @@ public interface EmpresaRepository extends JpaRepository<Empresa, Long>, JpaSpec
 	@Query(value = "SELECT e FROM Empresa e WHERE e.id = :id AND e.chave = :chave")
 	Empresa findByIdAndChave(Long id, String chave);
 
+	@Query(value = "SELECT e FROM Empresa e WHERE e.chave = :chave")
+	Empresa findByChave(String chave);
+
+	// Find Empresa By Categoria Id
+	// @Query(value = "SELECT e FROM Empresa e WHERE e.categoria.id = :id")
 	List<Empresa> findByCategoriaId(Long id);
+
 }

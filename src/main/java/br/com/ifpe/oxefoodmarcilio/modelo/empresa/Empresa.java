@@ -1,7 +1,12 @@
 package br.com.ifpe.oxefoodmarcilio.modelo.empresa;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -12,6 +17,7 @@ import org.hibernate.annotations.Where;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import br.com.ifpe.oxefoodmarcilio.modelo.acesso.Usuario;
+import br.com.ifpe.oxefoodmarcilio.modelo.produto.Produto;
 import br.com.ifpe.oxefoodmarcilio.util.entity.EntidadeAuditavel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,44 +42,48 @@ public class Empresa extends EntidadeAuditavel {
 	@NotNull
 	@Column(nullable = false)
 	private String chave;
-	
-    @ManyToOne
-    @JoinColumn(nullable = false)
-    private Usuario usuario;
-	
+
 	@ManyToOne
-	@JoinColumn
+	@JoinColumn(nullable = false)
+	private Usuario usuario;
+
+	@JsonIgnore
+	@ElementCollection(fetch = FetchType.EAGER)
+	@Builder.Default
+	private List<Produto> produtos = new ArrayList<>();
+
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	private CategoriaEmpresa categoria;
-    
+
 	@NotNull
 	@Column(nullable = false, length = 100)
 	private String site;
-	
+
 	@NotNull
 	@Column(nullable = false, length = 18)
 	private String cnpj;
-	
-	
+
 	@NotNull
 	@Column(nullable = false, length = 10)
 	private String inscricaoEstadual;
-	
+
 	@NotNull
 	@Column(nullable = false, length = 50)
 	private String nomeEmpresarial;
-	
+
 	@NotNull
 	@Column(nullable = false, length = 100)
 	private String nomeFantasia;
-	
+
 	@NotNull
 	@Column(nullable = false, length = 20)
 	private String fone;
-	
+
 	@NotNull
 	@Column(nullable = false, length = 20)
-	private String foneAlternativo;	
-	
+	private String foneAlternativo;
+
 	public void updateFrom(Empresa params) {
 		this.setSite(params.getSite());
 		this.setCnpj(params.getCnpj());

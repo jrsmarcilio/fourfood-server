@@ -1,17 +1,39 @@
 version: "3"
 services:
+  app:
+    image: 'jrsmarcilio/oxefood-marcilio:latest'
+    build:
+      context: .
+    container_name: app
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
+    environment:
+      JDBC_DATABASE_URL: jdbc:postgresql://db:5432/fourfood
+      JDBC_DATABASE_PASSWORD: banco
+      JDBC_DATABASE_USERNAME: postgres
+      EMAIL_USERNAME: mgsj@discente.ifpe.edu.br
+      EMAIL_PASSWORD: aglfpjhwerqkvgeq
+      JPA_HIBERNATE_DLL: update
 
-  postgres:
+  db:
     image: postgres
+    container_name: db
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: banco
-      POSTGRES_DB: fourfood
+      POSTGRES_DB: postgres
     ports:
       - 5432:5432
+    expose:
+      - 5432
 
 volumes:
-    postgres_data: {}
-
-    
+  postgres_data: {}

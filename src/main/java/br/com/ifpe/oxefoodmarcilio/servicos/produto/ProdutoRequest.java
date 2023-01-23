@@ -14,35 +14,23 @@ public class ProdutoRequest {
 
 	private String chaveEmpresa;
 
-    private Long idCategoria;
+	private String imagem;
 
-    private String codigo;
-    
-    private String titulo;
-    
-    private String descricao;
+	private String titulo;
 
-    private double valorUnitario;
+	private String descricao;
 
-    private String tempoEntrega;
-    
-    private Boolean temComplemento;
+	private double valorUnitario;
 
-    private Boolean emDestaque;
+	private String tempoEntrega;
 
-    public Produto buildProduto() {
-    	
-	Produto produto = Produto.builder()
-		.chaveEmpresa(chaveEmpresa)
-		.codigo(codigo)
-		.titulo(titulo)
-		.descricao(descricao)
-		.valorUnitario(valorUnitario)
-		.tempoEntrega(tempoEntrega)
-		.temComplemento(temComplemento)
-		.emDestaque(emDestaque)
-		.build();
+	private Boolean temComplemento;
 
-	return produto;
-}	
+	private Boolean emDestaque;
+
+	public Produto buildProduto() {
+		return Produto.builder().imagem(imagem).titulo(titulo).descricao(descricao)
+				.valorUnitario(valorUnitario).tempoEntrega(tempoEntrega).temComplemento(temComplemento)
+				.emDestaque(emDestaque).build();
+	}
 }

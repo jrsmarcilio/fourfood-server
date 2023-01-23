@@ -33,9 +33,15 @@ public class CategoriaEmpresaController extends GenericController {
 	@ApiOperation(value = "Serviço responsável por salvar uma categoria de produto no sistema.")
 	@PostMapping
 	public ResponseEntity<CategoriaEmpresa> save(@RequestBody @Valid CategoriaEmpresaRequest request) {
-		validarPreenchimentoChave(request.getChaveEmpresa());
 		CategoriaEmpresa CategoriaEmpresa = CategoriaEmpresaService.save(request.buildCategoriaEmpresa());
 		return new ResponseEntity<CategoriaEmpresa>(CategoriaEmpresa, HttpStatus.CREATED);
+	}
+
+	@ApiOperation(value = "Serviço responsável por salvar varias categorias de produto no sistema.")
+	@PostMapping("/list")
+	public ResponseEntity<List<CategoriaEmpresa>> saveList(@RequestBody List<CategoriaEmpresaRequest> request) {
+		List<CategoriaEmpresa> CategoriaEmpresa = CategoriaEmpresaService.saveList(request);
+		return new ResponseEntity<List<CategoriaEmpresa>>(CategoriaEmpresa, HttpStatus.CREATED);
 	}
 
 	@ApiOperation(value = "Serviço responsável por obter uma categoria de produto referente ao Id passado na URL.")
@@ -53,12 +59,6 @@ public class CategoriaEmpresaController extends GenericController {
 	@GetMapping
 	public List<CategoriaEmpresa> categorias() {
 		return CategoriaEmpresaService.obterTodasCategorias();
-	}
-
-	@ApiOperation(value = "Serviço responsável por obter uma lista de categorias de produto da empresa passado na URL.")
-	@GetMapping("/porempresa/{chaveEmpresa}")
-	public List<CategoriaEmpresa> consultarPorChaveEmpresa(@PathVariable String chaveEmpresa) {
-		return CategoriaEmpresaService.consultarPorChaveEmpresa(chaveEmpresa);
 	}
 
 	@PutMapping("/{id}")

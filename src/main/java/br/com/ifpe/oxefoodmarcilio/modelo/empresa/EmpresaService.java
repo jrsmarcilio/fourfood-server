@@ -1,14 +1,19 @@
 package br.com.ifpe.oxefoodmarcilio.modelo.empresa;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.transaction.Transactional;
+import javax.validation.Valid;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.ifpe.oxefoodmarcilio.modelo.acesso.Usuario;
 import br.com.ifpe.oxefoodmarcilio.modelo.acesso.UsuarioService;
+import br.com.ifpe.oxefoodmarcilio.servicos.empresa.CategoriaEmpresaRequest;
+import br.com.ifpe.oxefoodmarcilio.servicos.empresa.EmpresaRequest;
 import br.com.ifpe.oxefoodmarcilio.util.entity.GenericService;
 import br.com.ifpe.oxefoodmarcilio.util.exception.EntityAlreadyExistsException;
 
@@ -21,6 +26,9 @@ public class EmpresaService extends GenericService {
 	@Autowired
 	private UsuarioService usuarioService;
 
+	@Autowired
+	private CategoriaEmpresaService categoriaEmpresaService;
+
 	@Transactional
 	public Empresa save(Empresa empresa) {
 		usuarioService.save(empresa.getUsuario());
@@ -31,6 +39,11 @@ public class EmpresaService extends GenericService {
 	@Transactional
 	public Empresa findById(Long id) {
 		return repository.findById(id).get();
+	}
+
+	@Transactional
+	public Empresa findByChave(String chave) {
+		return repository.findByChave(chave);
 	}
 
 	@Transactional
@@ -74,10 +87,44 @@ public class EmpresaService extends GenericService {
 	public List<Empresa> obterTodasEmpresas() {
 		return repository.findAll();
 	}
-	
+
 	@Transactional
 	public List<Empresa> obterEmpresasPorCategoriaId(Long id) {
 		return repository.findByCategoriaId(id);
 	}
 
+	public List<Empresa> saveList(@Valid List<EmpresaRequest> request) {
+		List<Empresa> empresas = new ArrayList<>();
+		
+		for (EmpresaRequest empresaRequest : request) {
+			System.out.println("file: EmpresaService.java:99 ~ empresaRequest" + empresaRequest.getEmail());
+
+			Empresa empresa = new Empresa();
+			Usuario usuario = new Usuario();
+
+			usuario.setUsername(empresaRequest.getEmail());
+			usuario.setPassword(empresaRequest.getPassword());
+			usuario.setHabilitado(Boolean.TRUE);
+			empresa.setUsuario(usuario);
+
+			empresa.setChave(empresaRequest.getChave());
+			empresa.setSite(empresaRequest.getSite());
+			empresa.setCnpj(empresaRequest.getCnpj());
+			empresa.setInscricaoEstadual(empresaRequest.getInscricaoEstadual());
+			empresa.setNomeEmpresarial(empresaRequest.getNomeEmpresarial());
+			empresa.setNomeFantasia(empresaRequest.getNomeFantasia());
+			empresa.setFone(empresaRequest.getFone());
+			empresa.setFoneAlternativo(empresaRequest.getFoneAlternativo());
+			empresa.setHabilitado(Boolean.TRUE);
+			empresa.setCategoria(categoriaEmpresaService.findById(empresaRequest.getIdCategoria()));
+			empresa.getUsuario().getRoles().add(Usuario.ROLE_EMPRESA_ADMIN);
+
+			empresa.getUsuario().builder().build();
+			empresa.builder().build();
+
+			empresas.add(empresa);
+		}
+
+		return repository.saveAll(empresas);
+	}
 }

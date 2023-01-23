@@ -76,7 +76,7 @@ public class SecurityConfig {
 	 	
 	 	//Configuração de autorizações de acesso para Empresa
 
-	 	.antMatchers(HttpMethod.POST, "/api/empresa").permitAll()
+	 	.antMatchers(HttpMethod.POST, "/api/empresa/**").permitAll()
 	 	.antMatchers(HttpMethod.DELETE, "/api/empresa/*").permitAll()
 	 	.antMatchers(HttpMethod.GET, "/api/empresa/**").permitAll()
 	 	
@@ -86,7 +86,7 @@ public class SecurityConfig {
 	 
 	 	//Configuração de autorizações de acesso para Categoria Empresa
 	 	
-	 	.antMatchers(HttpMethod.POST, "/api/categoriaempresa").permitAll()
+	 	.antMatchers(HttpMethod.POST, "/api/categoriaempresa/**").permitAll()
 	 	.antMatchers(HttpMethod.GET, "/api/categoriaempresa/**").permitAll()
 	 	.antMatchers(HttpMethod.PUT, "/api/categoriaempresa/*").permitAll()
 	 	.antMatchers(HttpMethod.DELETE, "/api/categoriaempresa/*").permitAll()

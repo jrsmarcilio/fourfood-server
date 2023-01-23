@@ -1,0 +1,1388 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-01-15T15:40:08.966Z",
+  "__export_source": "insomnia.desktop.app:v2022.5.1",
+  "resources": [
+    {
+      "_id": "req_cca25175d71344d4b1817917d6815b45",
+      "parentId": "fld_797b66e250eb456481e87008591f5ea2",
+      "modified": 1673797077561,
+      "created": 1671582828009,
+      "url": "{{ _.BASE_URL }}/api/categoriaproduto",
+      "name": "categoriaproduto - save",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"descricao\": \"Açaí\",\n    \"chaveEmpresa\": \"${% uuid 'v4' %}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_fbfd10738d914f4f9306845040380b3d"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_797b66e250eb456481e87008591f5ea2",
+      "parentId": "fld_c2b1094d9f384a95b27743b9997374b4",
+      "modified": 1671582828011,
+      "created": 1671582828011,
+      "name": "CategoriaProduto",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671582828011,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_c2b1094d9f384a95b27743b9997374b4",
+      "parentId": "wrk_b74dcc57af86408ab1bfee90a0b5b952",
+      "modified": 1671582830574,
+      "created": 1671582830574,
+      "name": "Oxe Food",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671582830574,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_b74dcc57af86408ab1bfee90a0b5b952",
+      "parentId": null,
+      "modified": 1671582834776,
+      "created": 1671582834776,
+      "name": "My Document",
+      "description": "",
+      "scope": "design",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_7e092b3ef4d24130a38a3de3908802ab",
+      "parentId": "fld_797b66e250eb456481e87008591f5ea2",
+      "modified": 1671582899576,
+      "created": 1671582828006,
+      "url": "{{ _.BASE_URL }}/api/categoriaproduto/20",
+      "name": "categoriaproduto - getId",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582828006,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b5a80aadee5a4d39a3f63d0ef39a88fe",
+      "parentId": "fld_797b66e250eb456481e87008591f5ea2",
+      "modified": 1671597749819,
+      "created": 1671582828005,
+      "url": "{{ _.BASE_URL }}/api/categoriaproduto/porempresa/bc87cd75-c1f7-4ac4-8d98-b63c461f376c",
+      "name": "categoriaproduto - porEmpresa",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582828005,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9b8ec786453849ad88c67406d223d74a",
+      "parentId": "fld_797b66e250eb456481e87008591f5ea2",
+      "modified": 1673302082970,
+      "created": 1673196211171,
+      "url": "{{ _.BASE_URL }}/api/categoriaproduto",
+      "name": "categoriaprodutos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2b8359463f22420da27c6682f937bf89",
+      "parentId": "fld_797b66e250eb456481e87008591f5ea2",
+      "modified": 1672982737489,
+      "created": 1671582828004,
+      "url": "{{ _.BASE_URL }}/api/categoriaproduto/4",
+      "name": "categoriaproduto - update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"descricao\": \"Crepes 234\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e77f36cef205422cba227c91865028fa"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582828004,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a8d1a600c0164bb2b3b523b68eb20be9",
+      "parentId": "fld_797b66e250eb456481e87008591f5ea2",
+      "modified": 1671582828003,
+      "created": 1671582828003,
+      "url": "{{ _.BASE_URL }}/api/categoriaproduto/3",
+      "name": "categoriaproduto - delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582828003,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_eff1fba154ac4a978c5e241088572531",
+      "parentId": "fld_ad472fcf715f42a8a58284b441314e31",
+      "modified": 1673563535104,
+      "created": 1673304934049,
+      "url": "{{ _.BASE_URL }}/api/categoriaempresa",
+      "name": "categoriaproduto - save",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"descricao\": \"Bebidas\",\n    \"chaveEmpresa\": \"${% uuid 'v4' %}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_fbfd10738d914f4f9306845040380b3d"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582828009,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_ad472fcf715f42a8a58284b441314e31",
+      "parentId": "fld_c2b1094d9f384a95b27743b9997374b4",
+      "modified": 1673304934019,
+      "created": 1673304934019,
+      "name": "CategoriaEmpresa",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671582828008.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_d30266240a2c408d90d3a743c7b89b96",
+      "parentId": "fld_ad472fcf715f42a8a58284b441314e31",
+      "modified": 1673305557160,
+      "created": 1673304934048,
+      "url": "{{ _.BASE_URL }}/api/categoriaempresa/20",
+      "name": "categoriaproduto - getId",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582828006,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4e021e68e9b44947badb45cd381e9c76",
+      "parentId": "fld_ad472fcf715f42a8a58284b441314e31",
+      "modified": 1673305559179,
+      "created": 1673304934046,
+      "url": "{{ _.BASE_URL }}/api/categoriaempresa/porempresa/bc87cd75-c1f7-4ac4-8d98-b63c461f376c",
+      "name": "categoriaproduto - porEmpresa",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582828005,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f338e769511e4997a3700434f3ed0df9",
+      "parentId": "fld_ad472fcf715f42a8a58284b441314e31",
+      "modified": 1673305684557,
+      "created": 1673304934052,
+      "url": "{{ _.BASE_URL }}/api/categoriaempresa",
+      "name": "categoriaprodutos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582828004.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3270273d3c5c479d9003f11e000f52ba",
+      "parentId": "fld_ad472fcf715f42a8a58284b441314e31",
+      "modified": 1673305653325,
+      "created": 1673304934043,
+      "url": "{{ _.BASE_URL }}/api/categoriaempresa/1",
+      "name": "categoriaproduto - update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"descricao\": \"Pizza\",\n    \"chaveEmpresa\": \"{% uuid 'v4' %}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e77f36cef205422cba227c91865028fa"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582828004,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5be5d1f2cb944de49071978f119cf688",
+      "parentId": "fld_ad472fcf715f42a8a58284b441314e31",
+      "modified": 1673305565764,
+      "created": 1673304934036,
+      "url": "{{ _.BASE_URL }}/api/categoriaempresa/3",
+      "name": "categoriaproduto - delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582828003,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e7aedbcc741f4dceac67112e1f393de9",
+      "parentId": "fld_1ebba2a27df14eccaf1af75f2493d3a6",
+      "modified": 1673797059197,
+      "created": 1671582827976,
+      "url": "{{ _.BASE_URL }}/api/produto",
+      "name": "produto - save",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"idCategoria\": 3,\n    \"chaveEmpresa\": \"7788\",\n    \"codigo\": \"005\",\n    \"titulo\": \"Pizza de Mussarela\",\n    \"descricao\": \"Com massa tradicional\",\n    \"valorUnitario\": 12,\n    \"tempoEntrega\": \"30 min\",\n    \"temComplemento\": false,\n    \"emDestaque\": false\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_a6fb0e2c756e49a495b84f231a126763"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_1ebba2a27df14eccaf1af75f2493d3a6",
+      "parentId": "fld_c2b1094d9f384a95b27743b9997374b4",
+      "modified": 1671582892369,
+      "created": 1671582827978,
+      "name": "Produto",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671582828006,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_74633e290f79469ca7267c4ff36161df",
+      "parentId": "fld_1ebba2a27df14eccaf1af75f2493d3a6",
+      "modified": 1672980666492,
+      "created": 1671582827974,
+      "url": "{{ _.BASE_URL }}/api/produto/4",
+      "name": "produto - update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"idCategoria\": 3,\n    \"chaveEmpresa\": \"7788\",\n    \"codigo\": \"005\",\n    \"titulo\": \"Pizza de Calabreza\",\n    \"descricao\": \"Com massa tradicional\",\n    \"valorUnitario\": 25,\n    \"tempoEntrega\": \"30 min\",\n    \"temComplemento\": false,\n    \"emDestaque\": false\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_50270ed4ea34434b9c535dd6f19f797c"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_aa22d43b0c574fe8afeb3790a09c04b4",
+      "parentId": "fld_1ebba2a27df14eccaf1af75f2493d3a6",
+      "modified": 1673196924745,
+      "created": 1671582827973,
+      "url": "{{ _.BASE_URL }}/api/produto/4",
+      "name": "produto - obterPorId",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e8207f578b284d40b72c6147a7c420d4",
+      "parentId": "fld_1ebba2a27df14eccaf1af75f2493d3a6",
+      "modified": 1673196925748,
+      "created": 1673195072107,
+      "url": "{{ _.BASE_URL }}/api/produto",
+      "name": "produtos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4d356cae248b46539700560e17e6a630",
+      "parentId": "fld_0eb8aa2f7373436e959d2d9ef22a641b",
+      "modified": 1673563211929,
+      "created": 1671582827999,
+      "url": "{{ _.BASE_URL }}/api/cliente",
+      "name": "cliente - save",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"chaveEmpresa\": \"${% uuid 'v4' %}\",\n    \"nome\": \"Marcílio\",\n    \"email\": \"dores@gmail.com\",\n    \"password\": \"admin\",\n    \"cpf\": \"103.926.204-05\",\n    \"fone\": \"(81)99591-9313\",\n    \"foneAlternativo\": \"(81)9959-1931\"\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_960343953e084c62860b281b42d6b556"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827999,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0eb8aa2f7373436e959d2d9ef22a641b",
+      "parentId": "fld_c2b1094d9f384a95b27743b9997374b4",
+      "modified": 1671582828001,
+      "created": 1671582828001,
+      "name": "Cliente",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671582828001,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_0fec4bd177354142b15626fa451197cd",
+      "parentId": "fld_0eb8aa2f7373436e959d2d9ef22a641b",
+      "modified": 1672981091879,
+      "created": 1671582827998,
+      "url": "{{ _.BASE_URL }}/api/cliente/6",
+      "name": "cliente - getID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_668b8161db2d4a97b8819924b9e30a28",
+          "name": "token",
+          "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGllbnRlQGdtYWlsLmNvbSIsInJvbGVzIjpbXSwiaWF0IjoxNjcyOTc3MDg1LCJleHAiOjE2NzI5ODA2ODV9.OUfw_zCUQ_VfaC1lT76jt5hP4_8yknrK-560pkc1Aoc",
+          "description": ""
+        },
+        {
+          "id": "pair_b53b5eb2c0a44e8c9de354e74f195e6a",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b91c7751883c4596b38d997029de2ae2",
+      "parentId": "fld_0eb8aa2f7373436e959d2d9ef22a641b",
+      "modified": 1672980998272,
+      "created": 1671582827997,
+      "url": "{{ _.BASE_URL }}/api/cliente/porempresa/505bd2a9-045e-41cd-a134-34c561283271",
+      "name": "cliente - porEmpresa",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827997,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_66abd6b3257f43cb8839d02cde64efcf",
+      "parentId": "fld_0eb8aa2f7373436e959d2d9ef22a641b",
+      "modified": 1673196845795,
+      "created": 1673195160206,
+      "url": "{{ _.BASE_URL }}/api/cliente",
+      "name": "clientes",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827996.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3dd3a08790684595966e93c6dfd60d98",
+      "parentId": "fld_0eb8aa2f7373436e959d2d9ef22a641b",
+      "modified": 1672981084553,
+      "created": 1671582827996,
+      "url": "{{ _.BASE_URL }}/api/cliente/6",
+      "name": "cliente - update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"chaveEmpresa\": \"7895\",\n    \"nome\": \"Maria 3\",\n    \"cpf\": \"000.000-512-95\",\n    \"fone\": \"81 0000.0284\",\n    \"foneAlternativo\": \"81 0000.1582\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4a5ae3fcc01e4513bcfb5213adc29ab2"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827996,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1a1c1932c513430cb26303376ccc9d75",
+      "parentId": "fld_0eb8aa2f7373436e959d2d9ef22a641b",
+      "modified": 1671582827994,
+      "created": 1671582827994,
+      "url": "{{ _.BASE_URL }}/api/cliente/7",
+      "name": "cliente - delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827994,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_97a0ca080cd54604bbb31945c569c929",
+      "parentId": "fld_e88a323506bb4e20a1214b03b05b3c5c",
+      "modified": 1673563268539,
+      "created": 1673305736799,
+      "url": "{{ _.BASE_URL }}/api/empresa/porcategoria/6",
+      "name": "Empresas Por Categoria",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e88a323506bb4e20a1214b03b05b3c5c",
+      "parentId": "fld_c2b1094d9f384a95b27743b9997374b4",
+      "modified": 1671582827993,
+      "created": 1671582827993,
+      "name": "Empresa",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671582827993,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_afe31402130346fa875dc4d7feea7861",
+      "parentId": "fld_e88a323506bb4e20a1214b03b05b3c5c",
+      "modified": 1673563518124,
+      "created": 1673195581474,
+      "url": "{{ _.BASE_URL }}/api/empresa",
+      "name": "empresas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9cdff35b3a8f422893008c2108768aa8",
+      "parentId": "fld_e88a323506bb4e20a1214b03b05b3c5c",
+      "modified": 1673796620539,
+      "created": 1671582827989,
+      "url": "{{ _.BASE_URL }}/api/empresa",
+      "name": "empresa - save",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"chave\": \"{% uuid 'v4' %}\",\n\t\t\"idCategoria\": 134,\n    \"site\": \"http://pizzaif.com.br\",\n    \"cnpj\": \"582.352-512-95\",\n    \"inscricaoEstadual\": \"123321\",  \n    \"nomeEmpresarial\": \"Pizza IFPE LTDA\", \n    \"nomeFantasia\": \"Pizza da Galera\",\n    \"fone\": \"81 98274.0284\",\n    \"foneAlternativo\": \"81 3038.1582\",\n\t\t\"email\": \"pizzaria3@gmail.com\",\n\t\t\"password\": \"empresa\",\n\t\t\"perfil\": \"EMPRESA_ADMIN\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cbcf54cbd80d4d16a72cfc232345a874"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827989,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3f0a99df097441098f8f39a9a999958c",
+      "parentId": "fld_415902595acd43909b3821cb8ef0ec24",
+      "modified": 1672982784707,
+      "created": 1671582827987,
+      "url": "{{ _.BASE_URL }}/api/cupomdesconto",
+      "name": "cupomDesconto - save",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"chaveEmpresa\": \"3344\",\n    \"codigoDesconto\": \"CP-80\",\n    \"percentualDesconto\": 0.10,\n    \"valorDesconto\": 20,\n    \"valorMinimoPedidoPermitido\": 10,\n    \"quantidadeUso\": 0\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_034efb29b4ec4cd18ea3b5c2df27a048"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827987,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_415902595acd43909b3821cb8ef0ec24",
+      "parentId": "fld_c2b1094d9f384a95b27743b9997374b4",
+      "modified": 1671582827988,
+      "created": 1671582827988,
+      "name": "CupomDesconto",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671582827988,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_0e39949aeeb24b48a4438b493d705e33",
+      "parentId": "fld_415902595acd43909b3821cb8ef0ec24",
+      "modified": 1671582827985,
+      "created": 1671582827985,
+      "url": "{{ _.BASE_URL }}/api/cupomdesconto/5",
+      "name": "cupomdesconto - obterPorID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827985,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8a5dba538b4645d5aaac5b8271cb1165",
+      "parentId": "fld_415902595acd43909b3821cb8ef0ec24",
+      "modified": 1671582827984,
+      "created": 1671582827984,
+      "url": "{{ _.BASE_URL }}/api/cupomdesconto/porempresa/3344",
+      "name": "cupomdesconto - porEmpresa",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827984,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8b9489aa2ad64eb79e6e3ee316be894f",
+      "parentId": "fld_415902595acd43909b3821cb8ef0ec24",
+      "modified": 1671582827983,
+      "created": 1671582827983,
+      "url": "{{ _.BASE_URL }}/api/cupomdesconto",
+      "name": "cupomdesconto - ListarTodos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827983,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_33e25fdec5a04b8d80dc7fcf2f9295a4",
+      "parentId": "fld_415902595acd43909b3821cb8ef0ec24",
+      "modified": 1672982891248,
+      "created": 1671582827981,
+      "url": "{{ _.BASE_URL }}/api/cupomdesconto/6",
+      "name": "cupomdesconto - update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"chaveEmpresa\": \"3344\",\n    \"codigoDesconto\": \"CP-90\",\n    \"percentualDesconto\": 0.20,\n    \"valorDesconto\": 30,\n    \"valorMinimoPedidoPermitido\": 10,\n    \"quantidadeUso\": 0\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_9d7a7ebd30b94915aeca243ca983822b"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827981,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7aa1239f8b2445f3b42983576254718a",
+      "parentId": "fld_415902595acd43909b3821cb8ef0ec24",
+      "modified": 1671582827980,
+      "created": 1671582827980,
+      "url": "{{ _.BASE_URL }}/api/cupomdesconto/7",
+      "name": "cupomdesconto - delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827980,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a28b1bc3bc7c41ecb14cc754adaaf6f2",
+      "parentId": "fld_521cf228ed8e4670bcac309f14201af7",
+      "modified": 1672982315125,
+      "created": 1671582827970,
+      "url": "{{ _.BASE_URL }}/api/enderecocliente/6/endereco",
+      "name": "enderecoCliente - save",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"rua\": \"Rua Ceará\",\n    \"numero\": \"121\",\n    \"bairro\": \"Boa Viagem\",\n    \"cep\": \"53.370-340\",\n    \"cidade\": \"Recife\",\n    \"estado\": \"PE\",\n    \"complemento\": \"Apto 1101\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8d7b865a32274c28bc10c25eb2623360"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_521cf228ed8e4670bcac309f14201af7",
+      "parentId": "fld_c2b1094d9f384a95b27743b9997374b4",
+      "modified": 1671582827971,
+      "created": 1671582827971,
+      "name": "EndereçoCliente",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671582827971,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_af79b2c216f8419f970730093e55467d",
+      "parentId": "fld_fb8623c5612e4df1a67c370145325ce8",
+      "modified": 1671582827968,
+      "created": 1671582827968,
+      "url": "{{ _.BASE_URL }}/api/entregador/12",
+      "name": "entregador - obterPorId",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827968,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_fb8623c5612e4df1a67c370145325ce8",
+      "parentId": "fld_c2b1094d9f384a95b27743b9997374b4",
+      "modified": 1671582827969,
+      "created": 1671582827969,
+      "name": "Entregador",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671582827969,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_0b975e0a97364bfa83ef5de21741e3e4",
+      "parentId": "fld_fb8623c5612e4df1a67c370145325ce8",
+      "modified": 1671582827966,
+      "created": 1671582827966,
+      "url": "{{ _.BASE_URL }}/api/entregador/porempresa/005566",
+      "name": "entregador - porChaveEmpresa",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827966,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6469aaf45ec444538bdd6d353a39817c",
+      "parentId": "fld_fb8623c5612e4df1a67c370145325ce8",
+      "modified": 1673306442033,
+      "created": 1671582827963,
+      "url": "{{ _.BASE_URL }}/api/entregador",
+      "name": "entregador - save",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"chaveEmpresa\": \"005566\",\n    \"cpf\": \"052.523.325-18\",\n    \"rg\": \"6418-291\",\n    \"nome\": \"Maria\",\n    \"endereco\": \"Rua xyz\",\n    \"qtdEntregasRealizadas\": 8,\n    \"valorFrete\": 12\n}\n\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_beebbedc187b4bccb33737c795f02b56"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827963,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1313925f646e4dd7b7f905643cd25113",
+      "parentId": "fld_fb8623c5612e4df1a67c370145325ce8",
+      "modified": 1671582827962,
+      "created": 1671582827962,
+      "url": "{{ _.BASE_URL }}/api/entregador",
+      "name": "entregador - listarTodos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827962,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4f7736fa86854152b3a38aa3a5fe9bbf",
+      "parentId": "fld_fb8623c5612e4df1a67c370145325ce8",
+      "modified": 1672976450092,
+      "created": 1671582827960,
+      "url": "{{ _.BASE_URL }}/api/entregador/13",
+      "name": "entregador - update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "",
+        "text": "{\n    \"chaveEmpresa\": \"005566\",\n    \"cpf\": \"052.523.325-18\",\n    \"rg\": \"6418-291\",\n    \"nome\": \"Maria 3\",\n    \"endereco\": \"Rua Casamar\",\n    \"qtdEntregasRealizadas\": 8,\n    \"valorFrete\": 12\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_72f9469764e6471995924379cffe4fd0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827960,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f5168d05d0854208ba401d111483fa64",
+      "parentId": "fld_fb8623c5612e4df1a67c370145325ce8",
+      "modified": 1671582827958,
+      "created": 1671582827958,
+      "url": "{{ _.BASE_URL }}/api/entregador/12",
+      "name": "entregador - remover",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827958,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_52a67ee8840644079828039bb26eedd1",
+      "parentId": "fld_58fe9df50a4b40bbac55390f67b67b43",
+      "modified": 1673563354779,
+      "created": 1671582827954,
+      "url": "{{ _.BASE_URL }}/api/user/signin",
+      "name": "user - save",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "{\n\t\"username\": \"admin@gmail.com\",\n\t\"password\": \"admin\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_3bf8fda61ac84fc482f2cc4bd39dc1f3"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827954,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_58fe9df50a4b40bbac55390f67b67b43",
+      "parentId": "fld_c2b1094d9f384a95b27743b9997374b4",
+      "modified": 1671582827955,
+      "created": 1671582827955,
+      "name": "Usuário",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671582827955,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_72411e6073e145e68d7b9ffeda261f59",
+      "parentId": "fld_58fe9df50a4b40bbac55390f67b67b43",
+      "modified": 1673563410807,
+      "created": 1671582827952,
+      "url": "{{ _.BASE_URL }}/api/login/signin",
+      "name": "login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "{\n\t\"username\": \"pizzaria@gmail.com\",\n\t\"password\": \"empresa\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e6a5ff4563f2438aa4dfee6fafbb83c4"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1671582827952,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d6273df082a54932977314b651b4b4df",
+      "parentId": "fld_c2b1094d9f384a95b27743b9997374b4",
+      "modified": 1673563361610,
+      "created": 1672106726786,
+      "url": "{{ _.BASE_URL }}",
+      "name": "Documentation",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_e12efa6e122a7c2c554befaed95182b16272c91d",
+      "parentId": "wrk_b74dcc57af86408ab1bfee90a0b5b952",
+      "modified": 1673797058608,
+      "created": 1671582837336,
+      "name": "Base Environment",
+      "data": {
+        "BASE_URL": "{{ _.LOCAL_URL }}",
+        "LOCAL_URL": "http://localhost:8080",
+        "HEROKU_URL": "https://fourfood-api.herokuapp.com",
+        "tokenCliente": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwaXp6YXJpYUBnbWFpbC5jb20iLCJyb2xlcyI6W10sImlhdCI6MTY3MzMxNDMwNiwiZXhwIjoxNjczMzE3OTA2fQ.e5Tsn642OrlLeEKK9LbvVzTpi3kegIHpo_uIsSUw_NY",
+        "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGllbnRlQGdtYWlsLmNvbSIsInJvbGVzIjpbXSwiaWF0IjoxNjczMTk2MDE5LCJleHAiOjE2NzMxOTk2MTl9.1Hul8bnVK-pzD6yvxq1svygYgOXNjCiQsV9yiJN_KzM"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "BASE_URL",
+          "BASE_URL",
+          "BASE_URL",
+          "token",
+          "token"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1671582837336,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_e12efa6e122a7c2c554befaed95182b16272c91d",
+      "parentId": "wrk_b74dcc57af86408ab1bfee90a0b5b952",
+      "modified": 1671582837338,
+      "created": 1671582837338,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_39e5fb1cd1914240a299876ffc12e799",
+      "parentId": "wrk_b74dcc57af86408ab1bfee90a0b5b952",
+      "modified": 1673796603493,
+      "created": 1671582834780,
+      "fileName": "oxefood",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}

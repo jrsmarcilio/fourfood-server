@@ -35,26 +35,6 @@ public class EmpresaController extends GenericController {
 	@Autowired
 	private CategoriaEmpresaService categoriaEmpresaService;
 
-	@ApiOperation(value = "Serviço responsável por salvar uma empresa no sistema.")
-	@PostMapping
-	public ResponseEntity<Empresa> save(@RequestBody @Valid EmpresaRequest request) {
-
-		Empresa empresa = request.buildEmpresa();
-
-		if (request.getPerfil() != null && !"".equals(request.getPerfil())) {
-			if (request.getPerfil().equals("Usuario")) {
-				empresa.getUsuario().getRoles().add(Usuario.ROLE_EMPRESA_USER);
-			} else if (request.getPerfil().equals("Admin")) {
-				empresa.getUsuario().getRoles().add(Usuario.ROLE_EMPRESA_ADMIN);
-			}
-		}
-
-		empresa.setCategoria(categoriaEmpresaService.findById(request.getIdCategoria()));
-
-		Empresa empresaCriada = empresaService.save(empresa);
-		return new ResponseEntity<Empresa>(empresaCriada, HttpStatus.CREATED);
-	}
-
 	@ApiOperation(value = "Serviço responsável por obter uma empresa referente ao Id passado na URL.")
 	@GetMapping("/{id}")
 	public Empresa get(@PathVariable Long id) {
@@ -67,12 +47,32 @@ public class EmpresaController extends GenericController {
 		return empresaService.obterTodasEmpresas();
 	}
 
+	@ApiOperation(value = "Serviço responsável por salvar uma empresa no sistema.")
+	@PostMapping
+	public ResponseEntity<Empresa> save(@RequestBody @Valid EmpresaRequest request) {
+		Empresa empresa = request.buildEmpresa();
+
+		empresa.getUsuario().getRoles()
+				.add(request.getPerfil().equals("Usuario") ? Usuario.ROLE_EMPRESA_USER : Usuario.ROLE_EMPRESA_ADMIN);
+
+		empresa.setCategoria(categoriaEmpresaService.findById(request.getIdCategoria()));
+		Empresa empresaCriada = empresaService.save(empresa);
+		return new ResponseEntity<Empresa>(empresaCriada, HttpStatus.CREATED);
+	}
+
+	@ApiOperation(value = "Serviço responsável por salvar uma lista de empresa no sistema.")
+	@PostMapping("/list")
+	public ResponseEntity<List<Empresa>> save(@RequestBody List<EmpresaRequest> request) {
+		List<Empresa> empresasCriadas = empresaService.saveList(request);
+		return new ResponseEntity<List<Empresa>>(empresasCriadas, HttpStatus.CREATED);
+	}
+
 	@ApiOperation(value = "Serviço responsável por obter uma lista de empresa referente ao id passada na URL.")
 	@GetMapping("/porcategoria/{id}")
 	public List<Empresa> consultarPorIdCategoria(@PathVariable Long id) {
 		return empresaService.obterEmpresasPorCategoriaId(id);
 	}
-	
+
 	@ApiOperation(value = "Serviço responsável por obter uma empresa referente a chave passada na URL.")
 	@GetMapping("/porchave/{chave}")
 	public List<Empresa> consultarPorChave(@PathVariable String chave) {

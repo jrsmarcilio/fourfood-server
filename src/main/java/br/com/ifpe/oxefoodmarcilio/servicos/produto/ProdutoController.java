@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.ifpe.oxefoodmarcilio.modelo.produto.CategoriaProdutoService;
+import br.com.ifpe.oxefoodmarcilio.modelo.empresa.Empresa;
+import br.com.ifpe.oxefoodmarcilio.modelo.empresa.EmpresaService;
 import br.com.ifpe.oxefoodmarcilio.modelo.produto.Produto;
 import br.com.ifpe.oxefoodmarcilio.modelo.produto.ProdutoService;
 import br.com.ifpe.oxefoodmarcilio.util.entity.GenericController;
@@ -30,13 +31,14 @@ public class ProdutoController extends GenericController {
 	private ProdutoService produtoService;
 
 	@Autowired
-	private CategoriaProdutoService categoriaProdutoService;
+	private EmpresaService empresaService;
 
 	@ApiOperation(value = "Serviço responsável por salvar um produto no sistema.")
 	@PostMapping
 	public ResponseEntity<Produto> save(@RequestBody @Valid ProdutoRequest request) {
 		Produto produto = request.buildProduto();
-		produto.setCategoria(categoriaProdutoService.findById(request.getIdCategoria()));
+		Empresa empresa = empresaService.findByChave(request.getChaveEmpresa());
+		produto.setEmpresa(empresa);
 		Produto produtoInserido = produtoService.save(produto);
 		return new ResponseEntity<Produto>(produtoInserido, HttpStatus.CREATED);
 	}
@@ -46,7 +48,7 @@ public class ProdutoController extends GenericController {
 	public List<Produto> produtos() {
 		return produtoService.obterTodosProdutos();
 	}
-	
+
 	@ApiOperation(value = "Serviço responsável por obter um produto referente ao Id passado na URL.")
 	@GetMapping("/{id}")
 	public Produto get(@PathVariable Long id) {
@@ -64,7 +66,6 @@ public class ProdutoController extends GenericController {
 	public ResponseEntity<Produto> update(@PathVariable("id") Long id, @RequestBody ProdutoRequest request) {
 
 		Produto produto = request.buildProduto();
-		produto.setCategoria(categoriaProdutoService.findById(request.getIdCategoria()));
 		Produto produtoAtualizado = produtoService.update(id, produto);
 
 		return new ResponseEntity<Produto>(produtoAtualizado, HttpStatus.OK);
