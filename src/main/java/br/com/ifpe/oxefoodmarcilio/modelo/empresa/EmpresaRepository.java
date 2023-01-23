@@ -10,10 +10,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EmpresaRepository extends JpaRepository<Empresa, Long>, JpaSpecificationExecutor<Empresa> {
 
-	List<Empresa> findByChaveOrderByNomeEmpresarialAsc(String chave);
+	List<Empresa> findByChaveOrderByNomeFantasiaAsc(String chave);
 	
-	@Query(value = "SELECT e FROM Empresa e WHERE e.chave= :chave AND e.nomeEmpresarial = :nomeEmpresarial")
-	Empresa findByChaveAndName(String chave, String nomeEmpresarial);
+	@Query(value = "SELECT e FROM Empresa e WHERE e.chave= :chave AND e.nomeFantasia = :nomeFantasia")
+	Empresa findByChaveAndName(String chave, String nomeFantasia);
 
 	@Query(value = "SELECT e FROM Empresa e WHERE e.id = :id AND e.chave = :chave")
 	Empresa findByIdAndChave(Long id, String chave);
@@ -21,8 +21,5 @@ public interface EmpresaRepository extends JpaRepository<Empresa, Long>, JpaSpec
 	@Query(value = "SELECT e FROM Empresa e WHERE e.chave = :chave")
 	Empresa findByChave(String chave);
 
-	// Find Empresa By Categoria Id
-	// @Query(value = "SELECT e FROM Empresa e WHERE e.categoria.id = :id")
 	List<Empresa> findByCategoriaId(Long id);
-
 }

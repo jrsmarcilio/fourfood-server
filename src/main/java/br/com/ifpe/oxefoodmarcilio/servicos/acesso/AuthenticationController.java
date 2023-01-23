@@ -9,6 +9,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ifpe.oxefoodmarcilio.modelo.acesso.Usuario;
 import br.com.ifpe.oxefoodmarcilio.modelo.acesso.UsuarioService;
-import br.com.ifpe.oxefoodmarcilio.modelo.cliente.ClienteService;
-import br.com.ifpe.oxefoodmarcilio.modelo.empresa.EmpresaService;
 import br.com.ifpe.oxefoodmarcilio.security.jwt.JwtTokenProvider;
 import br.com.ifpe.oxefoodmarcilio.util.entity.GenericController;
 
@@ -36,6 +35,7 @@ public class AuthenticationController extends GenericController {
 	private JwtTokenProvider jwtTokenProvider;
 
 	@PostMapping("/signin")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@ResponseStatus(HttpStatus.OK)
 	public Map<Object, Object> signin(@RequestBody AuthenticationRequest data) {
 

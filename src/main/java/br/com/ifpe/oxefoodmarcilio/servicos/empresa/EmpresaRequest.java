@@ -19,10 +19,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class EmpresaRequest {
 
-	private String site;
-
-	private String foneAlternativo;
-
 	@NotNull(message = "A Chave é de preenchimento obrigatório")
 	@NotBlank(message = "A Chave é de preenchimento obrigatório")
 	private String chave;
@@ -30,15 +26,6 @@ public class EmpresaRequest {
 	@NotNull(message = "O CNPJ é de preenchimento obrigatório")
 	@NotBlank(message = "O CNPJ é de preenchimento obrigatório")
 	private String cnpj;
-
-	@NotNull(message = "A incrição estadual é de preenchimento obrigatório")
-	@NotBlank(message = "A incrição estadual é de preenchimento obrigatório")
-	private String inscricaoEstadual;
-
-	@NotNull(message = "O Nome empresarial é de preenchimento obrigatório")
-	@NotBlank(message = "O Nome empresarial é de preenchimento obrigatório")
-	@Length(max = 100, message = "O Nome empresarial deverá ter no máximo {max} caracteres")
-	private String nomeEmpresarial;
 
 	@NotNull(message = "O Nome fantasia é de preenchimento obrigatório")
 	@NotBlank(message = "O Nome fantasia é de preenchimento obrigatório")
@@ -55,7 +42,7 @@ public class EmpresaRequest {
 
 	@NotBlank(message = "A senha é de preenchimento obrigatório")
 	private String password;
-	
+
 	@NotNull(message = "O perfil é de preenchimento obrigatório")
 	@NotBlank(message = "O perfil é de preenchimento obrigatório")
 	private String perfil;
@@ -63,13 +50,11 @@ public class EmpresaRequest {
 	private Long idCategoria;
 
 	public Empresa buildEmpresa() {
-		return Empresa.builder().chave(chave).site(site).cnpj(cnpj).usuario(buildUsuario())
-				.inscricaoEstadual(inscricaoEstadual).nomeEmpresarial(nomeEmpresarial).nomeFantasia(nomeFantasia)
-				.fone(fone).foneAlternativo(foneAlternativo).build();
+		return Empresa.builder().chave(chave).cnpj(cnpj).usuario(buildUsuario()).nomeFantasia(nomeFantasia).fone(fone)
+				.build();
 	}
 
 	public Usuario buildUsuario() {
 		return Usuario.builder().username(email).password(password).build();
 	}
-
 }

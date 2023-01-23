@@ -37,8 +37,9 @@ public class EmpresaController extends GenericController {
 
 	@ApiOperation(value = "Serviço responsável por obter uma empresa referente ao Id passado na URL.")
 	@GetMapping("/{id}")
-	public Empresa get(@PathVariable Long id) {
-		return empresaService.findById(id);
+	public ResponseEntity<Empresa> get(@PathVariable Long id) {
+		Empresa empresa = empresaService.findById(id);
+		return new ResponseEntity<Empresa>(empresa, HttpStatus.OK);
 	}
 
 	@ApiOperation(value = "Serviço responsável por obter todas as empresa cadastradas.")
