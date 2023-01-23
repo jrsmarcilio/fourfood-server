@@ -9,8 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface ProdutoRepository extends JpaRepository<Produto, Long>, JpaSpecificationExecutor<Produto> {
 
 	List<Produto> findByEmpresaOrderByDescricaoAsc(String chaveEmpresa);
-	
 	Produto findByIdAndEmpresa(String id, String chaveEmpresa);
-	
 	Produto findByEmpresaAndDescricaoOrderByDescricaoAsc(String chaveEmpresa, String descricao);
 }

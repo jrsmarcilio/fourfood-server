@@ -13,24 +13,12 @@ import lombok.NoArgsConstructor;
 public class ProdutoRequest {
 
 	private String chaveEmpresa;
-
 	private String imagem;
-
 	private String titulo;
-
 	private String descricao;
-
 	private double valorUnitario;
 
-	private String tempoEntrega;
-
-	private Boolean temComplemento;
-
-	private Boolean emDestaque;
-
 	public Produto buildProduto() {
-		return Produto.builder().imagem(imagem).titulo(titulo).descricao(descricao)
-				.valorUnitario(valorUnitario).tempoEntrega(tempoEntrega).temComplemento(temComplemento)
-				.emDestaque(emDestaque).build();
+		return Produto.builder().imagem(imagem).titulo(titulo).descricao(descricao).valorUnitario(valorUnitario).build();
 	}
 }

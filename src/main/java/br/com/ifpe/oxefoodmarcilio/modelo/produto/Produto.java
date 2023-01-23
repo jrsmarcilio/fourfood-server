@@ -31,10 +31,10 @@ public class Produto extends EntidadeAuditavel {
   public static final String LABEL = "Produto";
 
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name="chaveEmpresa")
+  @JoinColumn(name = "chaveEmpresa")
   private Empresa empresa;
-	
-  @Column
+
+  @Column(length = 300, nullable = false)
   private String imagem;
 
   @Column(length = 300, nullable = false)
@@ -46,22 +46,10 @@ public class Produto extends EntidadeAuditavel {
   @Column(nullable = false)
   private double valorUnitario;
 
-  @Column(length = 50)
-  private String tempoEntrega;
-
-  @Column
-  private Boolean temComplemento;
-
-  @Column
-  private Boolean emDestaque;
-
   public void updateFrom(Produto param) {
     this.setTitulo(param.getTitulo());
     this.setImagem(param.getImagem());
     this.setDescricao(param.getDescricao());
     this.setValorUnitario(param.getValorUnitario());
-    this.setTempoEntrega(param.getTempoEntrega());
-    this.setTemComplemento(param.getTemComplemento());
-    this.setEmDestaque(param.getEmDestaque());
   }
 }

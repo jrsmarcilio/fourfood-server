@@ -1,172 +1,46 @@
-2023-01-22 23:55:08.086  INFO 44304 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Starting OxefoodMarcilioApplication using Java 11.0.16 on ustore-ideapad with PID 44304 (/home/ustore/git/oxefood-marcilio/target/classes started by ustore in /home/ustore/git/oxefood-marcilio)
-2023-01-22 23:55:08.100  INFO 44304 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : No active profile set, falling back to 1 default profile: "default"
-2023-01-22 23:55:08.192  INFO 44304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-01-22 23:55:08.192  INFO 44304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-01-22 23:55:09.747  INFO 44304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-01-22 23:55:09.860  INFO 44304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 8 JPA repository interfaces.
-2023-01-22 23:55:11.262  INFO 44304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-22 23:55:11.277  INFO 44304 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-22 23:55:11.278  INFO 44304 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2023-01-22 23:55:11.393  INFO 44304 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-22 23:55:11.394  INFO 44304 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3201 ms
-2023-01-22 23:55:11.496  INFO 44304 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-22 23:55:22.595 ERROR 44304 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+2023-01-23 00:04:43.522  INFO 47073 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 7 class path changes (0 additions, 2 deletions, 5 modifications)
+2023-01-23 00:04:43.615  INFO 47073 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-23 00:04:43.667  INFO 47073 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:04:43.673  INFO 47073 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-23 00:04:43.701  INFO 47073 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-23 00:04:43.921  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Starting OxefoodMarcilioApplication using Java 11.0.16 on ustore-ideapad with PID 47073 (/home/ustore/git/oxefood-marcilio/target/classes started by ustore in /home/ustore/git/oxefood-marcilio)
+2023-01-23 00:04:43.922  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:04:44.515  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:04:44.559  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 7 JPA repository interfaces.
+2023-01-23 00:04:44.842  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:04:44.844  INFO 47073 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-23 00:04:44.844  INFO 47073 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-23 00:04:44.865  INFO 47073 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-23 00:04:44.865  INFO 47073 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 940 ms
+2023-01-23 00:04:44.912  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-01-23 00:04:44.950  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-01-23 00:04:44.950  INFO 47073 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://172.28.0.2:5432/postgres'
+2023-01-23 00:04:45.022  INFO 47073 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:04:45.030  INFO 47073 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-23 00:04:45.526  INFO 47073 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:04:45.526  INFO 47073 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:04:46.633  WARN 47073 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoriaProdutoService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [br.com.ifpe.oxefoodmarcilio.modelo.produto.CategoriaProdutoService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@408e2aa9]
+2023-01-23 00:04:46.635  INFO 47073 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:04:46.640  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-01-23 00:04:46.674  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-01-23 00:04:46.675  INFO 47073 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-23 00:04:46.700  INFO 47073 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
 
-org.postgresql.util.PSQLException: The connection attempt failed.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:331) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.Driver.makeConnection(Driver.java:402) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.Driver.connect(Driver.java:261) ~[postgresql-42.3.7.jar:42.3.7]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$logDataSources$1(H2ConsoleAutoConfiguration.java:86) ~[spring-boot-autoconfigure-2.7.4.jar:2.7.4]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
-	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:395) ~[na:na]
-	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258) ~[na:na]
-	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578) ~[na:na]
-	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources(H2ConsoleAutoConfiguration.java:92) ~[spring-boot-autoconfigure-2.7.4.jar:2.7.4]
-	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$h2Console$0(H2ConsoleAutoConfiguration.java:68) ~[spring-boot-autoconfigure-2.7.4.jar:2.7.4]
-	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.withThreadContextClassLoader(H2ConsoleAutoConfiguration.java:77) ~[spring-boot-autoconfigure-2.7.4.jar:2.7.4]
-	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.h2Console(H2ConsoleAutoConfiguration.java:68) ~[spring-boot-autoconfigure-2.7.4.jar:2.7.4]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.23.jar:5.3.23]
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-23 00:04:46.781 ERROR 47073 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoriaProdutoService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [br.com.ifpe.oxefoodmarcilio.modelo.produto.CategoriaProdutoService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@408e2aa9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1302) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-5.3.23.jar:5.3.23]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577) ~[spring-context-5.3.23.jar:5.3.23]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.4.jar:2.7.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.4.jar:2.7.4]
-	at br.com.ifpe.oxefoodmarcilio.OxefoodMarcilioApplication.main(OxefoodMarcilioApplication.java:12) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.4.jar:2.7.4]
-Caused by: java.net.SocketTimeoutException: connect timed out
-	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:608) ~[na:na]
-	at org.postgresql.core.PGStream.createSocket(PGStream.java:241) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235) ~[postgresql-42.3.7.jar:42.3.7]
-	... 90 common frames omitted
-
-2023-01-22 23:55:22.971  INFO 44304 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-01-22 23:55:23.066  INFO 44304 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2023-01-22 23:55:23.245  INFO 44304 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-01-22 23:55:23.382  INFO 44304 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-01-22 23:55:24.517  INFO 44304 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-22 23:55:35.537 ERROR 44304 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
-
-org.postgresql.util.PSQLException: The connection attempt failed.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:331) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.Driver.makeConnection(Driver.java:402) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.Driver.connect(Driver.java:261) ~[postgresql-42.3.7.jar:42.3.7]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:183) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:104) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.11.Final.jar:5.6.11.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.23.jar:5.3.23]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.23.jar:5.3.23]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.23.jar:5.3.23]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.23.jar:5.3.23]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.23.jar:5.3.23]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.23.jar:5.3.23]
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.4.jar:2.7.4]
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.4.jar:2.7.4]
@@ -180,81 +54,343 @@ org.postgresql.util.PSQLException: The connection attempt failed.
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.4.jar:2.7.4]
-Caused by: java.net.SocketTimeoutException: connect timed out
-	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:608) ~[na:na]
-	at org.postgresql.core.PGStream.createSocket(PGStream.java:241) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109) ~[postgresql-42.3.7.jar:42.3.7]
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235) ~[postgresql-42.3.7.jar:42.3.7]
-	... 54 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [br.com.ifpe.oxefoodmarcilio.modelo.produto.CategoriaProdutoService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@408e2aa9]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 23 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: CategoriaProduto
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.23.jar:5.3.23]
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: CategoriaProduto
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:398) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.7.4.jar:2.7.4]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 29 common frames omitted
 
-2023-01-22 23:55:35.545  WARN 44304 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08001
-2023-01-22 23:55:35.546 ERROR 44304 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : The connection attempt failed.
-2023-01-22 23:55:35.565 ERROR 44304 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-2023-01-22 23:55:35.571  WARN 44304 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
-2023-01-22 23:58:55.359  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Starting OxefoodMarcilioApplication using Java 11.0.16 on ustore-ideapad with PID 47073 (/home/ustore/git/oxefood-marcilio/target/classes started by ustore in /home/ustore/git/oxefood-marcilio)
-2023-01-22 23:58:55.362  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : No active profile set, falling back to 1 default profile: "default"
-2023-01-22 23:58:55.436  INFO 47073 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-01-22 23:58:55.436  INFO 47073 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-01-22 23:58:56.814  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-01-22 23:58:56.933  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 8 JPA repository interfaces.
-2023-01-22 23:58:58.341  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-22 23:58:58.356  INFO 47073 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-22 23:58:58.357  INFO 47073 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2023-01-22 23:58:58.456  INFO 47073 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-22 23:58:58.456  INFO 47073 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3019 ms
-2023-01-22 23:58:58.546  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-22 23:58:58.763  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-01-22 23:58:58.782  INFO 47073 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://172.28.0.2:5432/postgres'
-2023-01-22 23:58:59.098  INFO 47073 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-01-22 23:58:59.160  INFO 47073 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2023-01-22 23:58:59.330  INFO 47073 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-01-22 23:58:59.458  INFO 47073 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-01-22 23:59:00.743  INFO 47073 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-01-22 23:59:00.753  INFO 47073 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-01-22 23:59:03.657 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-resources/**']
-2023-01-22 23:59:03.675 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-ui.html']
-2023-01-22 23:59:03.675 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger*/**']
-2023-01-22 23:59:03.676 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/v2/api-docs']
-2023-01-22 23:59:03.676 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/webjars/**']
-2023-01-22 23:59:03.677 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/routes/**']
-2023-01-22 23:59:03.677 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
-2023-01-22 23:59:03.678 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/ws/**']
-2023-01-22 23:59:03.678 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/**/dadosPedidoNew/**']
-2023-01-22 23:59:03.678 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/image/**']
-2023-01-22 23:59:03.679 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/login/signin', POST]
-2023-01-22 23:59:03.679 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente', POST]
-2023-01-22 23:59:03.680 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/**', GET]
-2023-01-22 23:59:03.680 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', PUT]
-2023-01-22 23:59:03.681 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', DELETE]
-2023-01-22 23:59:03.681 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', POST]
-2023-01-22 23:59:03.681 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/*', DELETE]
-2023-01-22 23:59:03.682 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', GET]
-2023-01-22 23:59:03.682 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/enderecocliente/**', POST]
-2023-01-22 23:59:03.683 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', POST]
-2023-01-22 23:59:03.683 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', GET]
-2023-01-22 23:59:03.684 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', PUT]
-2023-01-22 23:59:03.684 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', DELETE]
-2023-01-22 23:59:03.685 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto', POST]
-2023-01-22 23:59:03.685 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/**', GET]
-2023-01-22 23:59:03.685 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', PUT]
-2023-01-22 23:59:03.686 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', DELETE]
-2023-01-22 23:59:03.686 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto', POST]
-2023-01-22 23:59:03.686 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/**', GET]
-2023-01-22 23:59:03.687 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', PUT]
-2023-01-22 23:59:03.687 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', DELETE]
-2023-01-22 23:59:03.688 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', POST]
-2023-01-22 23:59:03.688 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', PUT]
-2023-01-22 23:59:03.688 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', DELETE]
-2023-01-22 23:59:03.689 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto/**', GET]
-2023-01-22 23:59:03.690 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasAnyAuthority('CLIENTE','EMPRESA_ADMIN','EMPRESA_USER')] for any request
-2023-01-22 23:59:03.725  INFO 47073 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@73569ee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d1d40fb, org.springframework.security.web.context.SecurityContextPersistenceFilter@158ed98e, org.springframework.security.web.header.HeaderWriterFilter@42bb841, org.springframework.web.filter.CorsFilter@42267751, org.springframework.security.web.authentication.logout.LogoutFilter@5f4ac138, br.com.ifpe.oxefoodmarcilio.security.jwt.JwtTokenAuthenticationFilter@33a8d913, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a7314a9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29d2f6c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f7ebc91, org.springframework.security.web.session.SessionManagementFilter@4fcd7192, org.springframework.security.web.access.ExceptionTranslationFilter@ce9fca4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c501743]
-2023-01-22 23:59:03.889  INFO 47073 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-01-22 23:59:04.181  WARN 47073 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-01-22 23:59:04.979  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-22 23:59:05.685  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Started OxefoodMarcilioApplication in 10.96 seconds (JVM running for 11.673)
+2023-01-23 00:04:48.267  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Starting OxefoodMarcilioApplication using Java 11.0.16 on ustore-ideapad with PID 47073 (/home/ustore/git/oxefood-marcilio/target/classes started by ustore in /home/ustore/git/oxefood-marcilio)
+2023-01-23 00:04:48.267  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:04:48.916  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:04:48.980  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 7 JPA repository interfaces.
+2023-01-23 00:04:49.474  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:04:49.476  INFO 47073 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-23 00:04:49.479  INFO 47073 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-23 00:04:49.502  INFO 47073 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-01-23 00:04:49.503  INFO 47073 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1231 ms
+2023-01-23 00:04:49.566  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-01-23 00:04:49.609  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-01-23 00:04:49.610  INFO 47073 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://172.28.0.2:5432/postgres'
+2023-01-23 00:04:49.690  INFO 47073 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:04:49.717  INFO 47073 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-23 00:04:50.261  INFO 47073 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:04:50.262  INFO 47073 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:04:50.835  WARN 47073 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoriaProdutoService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [br.com.ifpe.oxefoodmarcilio.modelo.produto.CategoriaProdutoService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@517eaa1a]
+2023-01-23 00:04:50.836  INFO 47073 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:04:50.837  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-01-23 00:04:50.848  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-01-23 00:04:50.850  INFO 47073 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-23 00:04:50.863  INFO 47073 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-23 00:04:50.868 ERROR 47073 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoriaProdutoService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [br.com.ifpe.oxefoodmarcilio.modelo.produto.CategoriaProdutoService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@517eaa1a]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1302) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.4.jar:2.7.4]
+	at br.com.ifpe.oxefoodmarcilio.OxefoodMarcilioApplication.main(OxefoodMarcilioApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.4.jar:2.7.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [br.com.ifpe.oxefoodmarcilio.modelo.produto.CategoriaProdutoService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@517eaa1a]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 23 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: CategoriaProduto
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.23.jar:5.3.23]
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: CategoriaProduto
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:398) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.7.4.jar:2.7.4]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 29 common frames omitted
+
+2023-01-23 00:05:58.696  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Starting OxefoodMarcilioApplication using Java 11.0.16 on ustore-ideapad with PID 47073 (/home/ustore/git/oxefood-marcilio/target/classes started by ustore in /home/ustore/git/oxefood-marcilio)
+2023-01-23 00:05:58.696  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:05:59.194  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:05:59.238  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 7 JPA repository interfaces.
+2023-01-23 00:05:59.580  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:05:59.583  INFO 47073 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-23 00:05:59.583  INFO 47073 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-23 00:05:59.602  INFO 47073 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-01-23 00:05:59.602  INFO 47073 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 902 ms
+2023-01-23 00:05:59.651  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-01-23 00:05:59.688  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-01-23 00:05:59.688  INFO 47073 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://172.28.0.2:5432/postgres'
+2023-01-23 00:05:59.766  INFO 47073 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:05:59.776  INFO 47073 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-23 00:06:00.189  INFO 47073 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:06:00.190  INFO 47073 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:06:01.293 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-resources/**']
+2023-01-23 00:06:01.293 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-ui.html']
+2023-01-23 00:06:01.293 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger*/**']
+2023-01-23 00:06:01.293 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/v2/api-docs']
+2023-01-23 00:06:01.294 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/webjars/**']
+2023-01-23 00:06:01.294 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/routes/**']
+2023-01-23 00:06:01.294 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+2023-01-23 00:06:01.294 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/ws/**']
+2023-01-23 00:06:01.294 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/**/dadosPedidoNew/**']
+2023-01-23 00:06:01.295 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/image/**']
+2023-01-23 00:06:01.295 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/login/signin', POST]
+2023-01-23 00:06:01.295 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente', POST]
+2023-01-23 00:06:01.295 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/**', GET]
+2023-01-23 00:06:01.296 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', PUT]
+2023-01-23 00:06:01.296 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', DELETE]
+2023-01-23 00:06:01.296 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', POST]
+2023-01-23 00:06:01.296 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/*', DELETE]
+2023-01-23 00:06:01.297 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', GET]
+2023-01-23 00:06:01.297 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/enderecocliente/**', POST]
+2023-01-23 00:06:01.297 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', POST]
+2023-01-23 00:06:01.297 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', GET]
+2023-01-23 00:06:01.297 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', PUT]
+2023-01-23 00:06:01.298 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', DELETE]
+2023-01-23 00:06:01.298 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto', POST]
+2023-01-23 00:06:01.298 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/**', GET]
+2023-01-23 00:06:01.298 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', PUT]
+2023-01-23 00:06:01.299 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', DELETE]
+2023-01-23 00:06:01.299 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto', POST]
+2023-01-23 00:06:01.299 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/**', GET]
+2023-01-23 00:06:01.299 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', PUT]
+2023-01-23 00:06:01.299 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', DELETE]
+2023-01-23 00:06:01.300 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', POST]
+2023-01-23 00:06:01.300 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', PUT]
+2023-01-23 00:06:01.300 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', DELETE]
+2023-01-23 00:06:01.300 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto/**', GET]
+2023-01-23 00:06:01.300 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasAnyAuthority('CLIENTE','EMPRESA_ADMIN','EMPRESA_USER')] for any request
+2023-01-23 00:06:01.313  INFO 47073 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ee4aae2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cc4c4e8, org.springframework.security.web.context.SecurityContextPersistenceFilter@19bbffed, org.springframework.security.web.header.HeaderWriterFilter@69ab6e86, org.springframework.web.filter.CorsFilter@7ec8b06d, org.springframework.security.web.authentication.logout.LogoutFilter@549ea579, br.com.ifpe.oxefoodmarcilio.security.jwt.JwtTokenAuthenticationFilter@272c07b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59d07850, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6bbde2b2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c340a09, org.springframework.security.web.session.SessionManagementFilter@4ebab81b, org.springframework.security.web.access.ExceptionTranslationFilter@50921735, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70d52d05]
+2023-01-23 00:06:01.379  INFO 47073 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-23 00:06:01.470  WARN 47073 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:06:01.767  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:06:02.120  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Started OxefoodMarcilioApplication in 3.476 seconds (JVM running for 428.108)
+2023-01-23 00:06:02.124  INFO 47073 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-01-23 00:07:32.685  INFO 47073 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-01-23 00:07:32.692  INFO 47073 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-23 00:07:32.712  INFO 47073 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:07:32.714  INFO 47073 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-01-23 00:07:32.727  INFO 47073 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-01-23 00:07:32.904  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Starting OxefoodMarcilioApplication using Java 11.0.16 on ustore-ideapad with PID 47073 (/home/ustore/git/oxefood-marcilio/target/classes started by ustore in /home/ustore/git/oxefood-marcilio)
+2023-01-23 00:07:32.905  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:07:33.328  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:07:33.372  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 7 JPA repository interfaces.
+2023-01-23 00:07:33.598  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:07:33.599  INFO 47073 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-23 00:07:33.599  INFO 47073 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-23 00:07:33.617  INFO 47073 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-01-23 00:07:33.618  INFO 47073 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 709 ms
+2023-01-23 00:07:33.658  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-01-23 00:07:33.696  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-01-23 00:07:33.696  INFO 47073 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://172.28.0.2:5432/postgres'
+2023-01-23 00:07:33.764  INFO 47073 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:07:33.773  INFO 47073 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-23 00:07:34.182  INFO 47073 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:07:34.182  INFO 47073 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:07:35.272 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-resources/**']
+2023-01-23 00:07:35.272 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-ui.html']
+2023-01-23 00:07:35.272 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger*/**']
+2023-01-23 00:07:35.273 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/v2/api-docs']
+2023-01-23 00:07:35.273 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/webjars/**']
+2023-01-23 00:07:35.273 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/routes/**']
+2023-01-23 00:07:35.273 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+2023-01-23 00:07:35.273 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/ws/**']
+2023-01-23 00:07:35.273 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/**/dadosPedidoNew/**']
+2023-01-23 00:07:35.274 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/image/**']
+2023-01-23 00:07:35.274 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/login/signin', POST]
+2023-01-23 00:07:35.274 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente', POST]
+2023-01-23 00:07:35.274 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/**', GET]
+2023-01-23 00:07:35.274 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', PUT]
+2023-01-23 00:07:35.274 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', DELETE]
+2023-01-23 00:07:35.275 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', POST]
+2023-01-23 00:07:35.275 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/*', DELETE]
+2023-01-23 00:07:35.275 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', GET]
+2023-01-23 00:07:35.275 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/enderecocliente/**', POST]
+2023-01-23 00:07:35.275 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', POST]
+2023-01-23 00:07:35.275 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', GET]
+2023-01-23 00:07:35.276 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', PUT]
+2023-01-23 00:07:35.276 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', DELETE]
+2023-01-23 00:07:35.276 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto', POST]
+2023-01-23 00:07:35.276 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/**', GET]
+2023-01-23 00:07:35.276 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', PUT]
+2023-01-23 00:07:35.276 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', DELETE]
+2023-01-23 00:07:35.277 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto', POST]
+2023-01-23 00:07:35.277 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/**', GET]
+2023-01-23 00:07:35.277 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', PUT]
+2023-01-23 00:07:35.277 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', DELETE]
+2023-01-23 00:07:35.277 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', POST]
+2023-01-23 00:07:35.277 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', PUT]
+2023-01-23 00:07:35.278 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', DELETE]
+2023-01-23 00:07:35.278 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto/**', GET]
+2023-01-23 00:07:35.278 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasAnyAuthority('CLIENTE','EMPRESA_ADMIN','EMPRESA_USER')] for any request
+2023-01-23 00:07:35.290  INFO 47073 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28bf557a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@400811c8, org.springframework.security.web.context.SecurityContextPersistenceFilter@db94340, org.springframework.security.web.header.HeaderWriterFilter@73ad6797, org.springframework.web.filter.CorsFilter@117dc9f9, org.springframework.security.web.authentication.logout.LogoutFilter@13b934f4, br.com.ifpe.oxefoodmarcilio.security.jwt.JwtTokenAuthenticationFilter@3f831d5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@710b620f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69022266, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@513ea055, org.springframework.security.web.session.SessionManagementFilter@3fe56ef5, org.springframework.security.web.access.ExceptionTranslationFilter@e3e5e16, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@727c1d6e]
+2023-01-23 00:07:35.354  INFO 47073 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-23 00:07:35.443  WARN 47073 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:07:35.728  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:07:36.152  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Started OxefoodMarcilioApplication in 3.295 seconds (JVM running for 522.14)
+2023-01-23 00:07:36.156  INFO 47073 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-01-23 00:08:18.770  INFO 47073 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-01-23 00:08:18.780  INFO 47073 --- [Thread-17] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-23 00:08:18.823  INFO 47073 --- [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:08:18.826  INFO 47073 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-01-23 00:08:18.841  INFO 47073 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-01-23 00:08:19.009  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Starting OxefoodMarcilioApplication using Java 11.0.16 on ustore-ideapad with PID 47073 (/home/ustore/git/oxefood-marcilio/target/classes started by ustore in /home/ustore/git/oxefood-marcilio)
+2023-01-23 00:08:19.010  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:08:19.424  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:08:19.460  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 7 JPA repository interfaces.
+2023-01-23 00:08:19.704  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:08:19.705  INFO 47073 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-23 00:08:19.706  INFO 47073 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-23 00:08:19.723  INFO 47073 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-01-23 00:08:19.723  INFO 47073 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 708 ms
+2023-01-23 00:08:19.766  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-01-23 00:08:19.803  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-01-23 00:08:19.803  INFO 47073 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://172.28.0.2:5432/postgres'
+2023-01-23 00:08:19.877  INFO 47073 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:08:19.886  INFO 47073 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-23 00:08:20.324  INFO 47073 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:08:20.324  INFO 47073 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:08:21.921 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-resources/**']
+2023-01-23 00:08:21.921 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-ui.html']
+2023-01-23 00:08:21.930 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger*/**']
+2023-01-23 00:08:21.930 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/v2/api-docs']
+2023-01-23 00:08:21.930 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/webjars/**']
+2023-01-23 00:08:21.930 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/routes/**']
+2023-01-23 00:08:21.930 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+2023-01-23 00:08:21.931 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/ws/**']
+2023-01-23 00:08:21.931 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/**/dadosPedidoNew/**']
+2023-01-23 00:08:21.931 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/image/**']
+2023-01-23 00:08:21.931 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/login/signin', POST]
+2023-01-23 00:08:21.931 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente', POST]
+2023-01-23 00:08:21.931 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/**', GET]
+2023-01-23 00:08:21.932 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', PUT]
+2023-01-23 00:08:21.932 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', DELETE]
+2023-01-23 00:08:21.932 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', POST]
+2023-01-23 00:08:21.932 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/*', DELETE]
+2023-01-23 00:08:21.932 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', GET]
+2023-01-23 00:08:21.932 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/enderecocliente/**', POST]
+2023-01-23 00:08:21.933 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', POST]
+2023-01-23 00:08:21.933 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', GET]
+2023-01-23 00:08:21.940 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', PUT]
+2023-01-23 00:08:21.941 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', DELETE]
+2023-01-23 00:08:21.941 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto', POST]
+2023-01-23 00:08:21.942 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/**', GET]
+2023-01-23 00:08:21.942 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', PUT]
+2023-01-23 00:08:21.942 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', DELETE]
+2023-01-23 00:08:21.943 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto', POST]
+2023-01-23 00:08:21.944 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/**', GET]
+2023-01-23 00:08:21.945 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', PUT]
+2023-01-23 00:08:21.945 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', DELETE]
+2023-01-23 00:08:21.945 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', POST]
+2023-01-23 00:08:21.945 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', PUT]
+2023-01-23 00:08:21.946 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', DELETE]
+2023-01-23 00:08:21.946 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto/**', GET]
+2023-01-23 00:08:21.946 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasAnyAuthority('CLIENTE','EMPRESA_ADMIN','EMPRESA_USER')] for any request
+2023-01-23 00:08:21.961  INFO 47073 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@238acbb0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43ba82ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b922b2a, org.springframework.security.web.header.HeaderWriterFilter@3f566921, org.springframework.web.filter.CorsFilter@67160809, org.springframework.security.web.authentication.logout.LogoutFilter@7c31b823, br.com.ifpe.oxefoodmarcilio.security.jwt.JwtTokenAuthenticationFilter@7da9e293, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b645475, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27f73f59, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@80b61dd, org.springframework.security.web.session.SessionManagementFilter@57b635f5, org.springframework.security.web.access.ExceptionTranslationFilter@185314b1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7afc0b2b]
+2023-01-23 00:08:22.040  INFO 47073 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-23 00:08:22.208  WARN 47073 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:08:22.622  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:08:23.070  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Started OxefoodMarcilioApplication in 4.101 seconds (JVM running for 569.058)
+2023-01-23 00:08:23.075  INFO 47073 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-01-23 00:12:44.650  INFO 47073 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-01-23 00:12:44.660  INFO 47073 --- [Thread-21] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-23 00:12:44.697  INFO 47073 --- [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:12:44.704  INFO 47073 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-01-23 00:12:44.734  INFO 47073 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-01-23 00:12:44.907  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Starting OxefoodMarcilioApplication using Java 11.0.16 on ustore-ideapad with PID 47073 (/home/ustore/git/oxefood-marcilio/target/classes started by ustore in /home/ustore/git/oxefood-marcilio)
+2023-01-23 00:12:44.908  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:12:45.304  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:12:45.339  INFO 47073 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 7 JPA repository interfaces.
+2023-01-23 00:12:45.558  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:12:45.559  INFO 47073 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-23 00:12:45.560  INFO 47073 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-23 00:12:45.575  INFO 47073 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-01-23 00:12:45.576  INFO 47073 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 665 ms
+2023-01-23 00:12:45.612  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-01-23 00:12:45.649  INFO 47073 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-01-23 00:12:45.649  INFO 47073 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://172.28.0.2:5432/postgres'
+2023-01-23 00:12:45.718  INFO 47073 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:12:45.727  INFO 47073 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-23 00:12:46.120  INFO 47073 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:12:46.121  INFO 47073 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:12:47.058 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-resources/**']
+2023-01-23 00:12:47.059 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-ui.html']
+2023-01-23 00:12:47.059 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger*/**']
+2023-01-23 00:12:47.059 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/v2/api-docs']
+2023-01-23 00:12:47.059 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/webjars/**']
+2023-01-23 00:12:47.059 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/routes/**']
+2023-01-23 00:12:47.059 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+2023-01-23 00:12:47.059 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/ws/**']
+2023-01-23 00:12:47.059 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/**/dadosPedidoNew/**']
+2023-01-23 00:12:47.060 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/image/**']
+2023-01-23 00:12:47.060 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/login/signin', POST]
+2023-01-23 00:12:47.060 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente', POST]
+2023-01-23 00:12:47.060 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/**', GET]
+2023-01-23 00:12:47.060 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', PUT]
+2023-01-23 00:12:47.060 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', DELETE]
+2023-01-23 00:12:47.060 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', POST]
+2023-01-23 00:12:47.061 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/*', DELETE]
+2023-01-23 00:12:47.061 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', GET]
+2023-01-23 00:12:47.061 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/enderecocliente/**', POST]
+2023-01-23 00:12:47.061 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', POST]
+2023-01-23 00:12:47.061 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', GET]
+2023-01-23 00:12:47.061 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', PUT]
+2023-01-23 00:12:47.061 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', DELETE]
+2023-01-23 00:12:47.061 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto', POST]
+2023-01-23 00:12:47.061 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/**', GET]
+2023-01-23 00:12:47.062 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', PUT]
+2023-01-23 00:12:47.062 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', DELETE]
+2023-01-23 00:12:47.062 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto', POST]
+2023-01-23 00:12:47.062 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/**', GET]
+2023-01-23 00:12:47.062 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', PUT]
+2023-01-23 00:12:47.062 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', DELETE]
+2023-01-23 00:12:47.062 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', POST]
+2023-01-23 00:12:47.063 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', PUT]
+2023-01-23 00:12:47.063 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', DELETE]
+2023-01-23 00:12:47.063 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto/**', GET]
+2023-01-23 00:12:47.063 DEBUG 47073 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasAnyAuthority('CLIENTE','EMPRESA_ADMIN','EMPRESA_USER')] for any request
+2023-01-23 00:12:47.070  INFO 47073 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@37dabc4b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50a8b0a6, org.springframework.security.web.context.SecurityContextPersistenceFilter@27ae2ba0, org.springframework.security.web.header.HeaderWriterFilter@4f7a19ff, org.springframework.web.filter.CorsFilter@285d9533, org.springframework.security.web.authentication.logout.LogoutFilter@2d076fc7, br.com.ifpe.oxefoodmarcilio.security.jwt.JwtTokenAuthenticationFilter@3efe1fd2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d04d4d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@322e8568, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c24c4a2, org.springframework.security.web.session.SessionManagementFilter@479ec7cf, org.springframework.security.web.access.ExceptionTranslationFilter@5e7a8b48, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b63bad0]
+2023-01-23 00:12:47.129  INFO 47073 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-23 00:12:47.214  WARN 47073 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:12:47.455  INFO 47073 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:12:47.735  INFO 47073 --- [restartedMain] b.c.i.o.OxefoodMarcilioApplication       : Started OxefoodMarcilioApplication in 2.874 seconds (JVM running for 833.722)
+2023-01-23 00:12:47.739  INFO 47073 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
