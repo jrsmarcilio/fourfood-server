@@ -19017,3 +19017,57 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation "usuario_roles" do
 2023-01-23 04:27:32.754  INFO 149837 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2023-01-23 04:27:35.456  INFO 149837 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-01-23 04:27:36.931  INFO 149837 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-23 05:28:23.890  INFO 171439 --- [main] b.c.i.o.OxefoodMarcilioApplicationTests  : Starting OxefoodMarcilioApplicationTests using Java 11.0.16 on ustore-ideapad with PID 171439 (started by ustore in /home/ustore/git/oxefood-marcilio)
+2023-01-23 05:28:23.893  INFO 171439 --- [main] b.c.i.o.OxefoodMarcilioApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2023-01-23 05:28:25.613  INFO 171439 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 05:28:25.737  INFO 171439 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 7 JPA repository interfaces.
+2023-01-23 05:28:27.060  INFO 171439 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 05:28:27.166  INFO 171439 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-01-23 05:28:27.461  INFO 171439 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 05:28:27.661  INFO 171439 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-23 05:28:29.055  INFO 171439 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-23 05:28:29.454  INFO 171439 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-23 05:28:29.733  INFO 171439 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 05:28:29.751  INFO 171439 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 05:28:32.727 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-resources/**']
+2023-01-23 05:28:32.759 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger-ui.html']
+2023-01-23 05:28:32.760 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/swagger*/**']
+2023-01-23 05:28:32.760 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/v2/api-docs']
+2023-01-23 05:28:32.761 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/webjars/**']
+2023-01-23 05:28:32.761 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/routes/**']
+2023-01-23 05:28:32.762 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+2023-01-23 05:28:32.762 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/ws/**']
+2023-01-23 05:28:32.763 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/**/dadosPedidoNew/**']
+2023-01-23 05:28:32.764 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/delifacil/image/**']
+2023-01-23 05:28:32.764 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/login/signin', POST]
+2023-01-23 05:28:32.765 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente', POST]
+2023-01-23 05:28:32.765 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/**', GET]
+2023-01-23 05:28:32.766 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', PUT]
+2023-01-23 05:28:32.767 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cliente/*', DELETE]
+2023-01-23 05:28:32.767 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', POST]
+2023-01-23 05:28:32.768 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/*', DELETE]
+2023-01-23 05:28:32.768 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/empresa/**', GET]
+2023-01-23 05:28:32.769 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/enderecocliente/**', POST]
+2023-01-23 05:28:32.769 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', POST]
+2023-01-23 05:28:32.770 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/**', GET]
+2023-01-23 05:28:32.771 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', PUT]
+2023-01-23 05:28:32.771 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaempresa/*', DELETE]
+2023-01-23 05:28:32.772 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto', POST]
+2023-01-23 05:28:32.773 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/**', GET]
+2023-01-23 05:28:32.774 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', PUT]
+2023-01-23 05:28:32.775 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/categoriaproduto/*', DELETE]
+2023-01-23 05:28:32.775 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto', POST]
+2023-01-23 05:28:32.776 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/**', GET]
+2023-01-23 05:28:32.777 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', PUT]
+2023-01-23 05:28:32.777 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/cupomdesconto/*', DELETE]
+2023-01-23 05:28:32.778 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', POST]
+2023-01-23 05:28:32.779 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', PUT]
+2023-01-23 05:28:32.779 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto', DELETE]
+2023-01-23 05:28:32.780 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/api/produto/**', GET]
+2023-01-23 05:28:32.781 DEBUG 171439 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasAnyAuthority('CLIENTE','EMPRESA_ADMIN','EMPRESA_USER')] for any request
+2023-01-23 05:28:32.821  INFO 171439 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3f54fabc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@719e8f9f, org.springframework.security.web.context.SecurityContextPersistenceFilter@232899d1, org.springframework.security.web.header.HeaderWriterFilter@2cd6fae8, org.springframework.web.filter.CorsFilter@5122387, org.springframework.security.web.authentication.logout.LogoutFilter@23f9d0ce, br.com.ifpe.oxefoodmarcilio.security.jwt.JwtTokenAuthenticationFilter@9abbe39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58397dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@620260ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11b234aa, org.springframework.security.web.session.SessionManagementFilter@20e8286a, org.springframework.security.web.access.ExceptionTranslationFilter@16448827, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@60a4595e]
+2023-01-23 05:28:33.430  WARN 171439 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 05:28:34.951  INFO 171439 --- [main] b.c.i.o.OxefoodMarcilioApplicationTests  : Started OxefoodMarcilioApplicationTests in 11.641 seconds (JVM running for 13.389)
+2023-01-23 05:28:35.251  INFO 171439 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 05:28:35.256  INFO 171439 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-23 05:28:35.282  INFO 171439 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
