@@ -54,14 +54,7 @@ public class ClienteController extends GenericController {
 			@ApiResponse(code = 500, message = "Foi gerado um erro no servidor."), })
 	@GetMapping("/{id}")
 	public Cliente obterClientePorID(@PathVariable Long id) {
-		System.out.println(id);
 		return clienteService.obterClientePorID(id);
-	}
-
-	@ApiOperation(value = "Serviço responsável por obter uma lista de clientes da empresa passado na URL.")
-	@GetMapping("/porempresa/{chaveEmpresa}")
-	public List<Cliente> consultarPorChaveEmpresa(@PathVariable String chaveEmpresa) {
-		return clienteService.consultarPorChaveEmpresa(chaveEmpresa);
 	}
 
 	@PutMapping("/{id}")

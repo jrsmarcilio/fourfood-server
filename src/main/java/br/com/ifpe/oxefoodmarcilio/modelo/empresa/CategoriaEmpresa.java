@@ -45,11 +45,6 @@ public class CategoriaEmpresa extends EntidadeAuditavel {
 	@Column(nullable = false)
 	private String imagem;
 
-	@JsonIgnore
-	@ElementCollection(fetch = FetchType.EAGER)
-	@Builder.Default
-	private List<Empresa> empresas = new ArrayList<>();
-
 	public void updateFrom(CategoriaEmpresa param) {
 		this.setDescricao(param.getDescricao());
 		this.setImagem(param.getImagem());

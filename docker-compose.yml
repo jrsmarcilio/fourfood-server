@@ -22,7 +22,7 @@ services:
       JPA_HIBERNATE_DLL: update
 
   db:
-    image: postgres
+    image: postgres:alpine
     container_name: db
     volumes:
       - postgres_data:/var/lib/postgresql/data

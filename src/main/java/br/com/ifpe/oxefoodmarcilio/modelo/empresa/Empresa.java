@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -18,6 +17,7 @@ import org.hibernate.annotations.Where;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import br.com.ifpe.oxefoodmarcilio.modelo.acesso.Usuario;
+import br.com.ifpe.oxefoodmarcilio.modelo.pedido.Pedido;
 import br.com.ifpe.oxefoodmarcilio.modelo.produto.Produto;
 import br.com.ifpe.oxefoodmarcilio.util.entity.EntidadeAuditavel;
 import lombok.AllArgsConstructor;
@@ -45,16 +45,18 @@ public class Empresa extends EntidadeAuditavel {
 	private String chave;
 
 	@ManyToOne
-	@JoinColumn(nullable = false)
 	private Usuario usuario;
+
+	@ManyToOne
+	private CategoriaEmpresa categoria;
 
 	@OneToMany(mappedBy = "empresa", orphanRemoval = true, fetch = FetchType.EAGER)
 	@Fetch(FetchMode.SUBSELECT)
 	private List<Produto> produtos;
 
-	@ManyToOne
-	@JoinColumn(nullable = false)
-	private CategoriaEmpresa categoria;
+	@OneToMany(mappedBy = "empresa", orphanRemoval = true, fetch = FetchType.EAGER)
+	@Fetch(FetchMode.SUBSELECT)
+	private List<Pedido> pedidos;
 
 	@NotNull
 	@Column(nullable = false, length = 18)

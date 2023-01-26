@@ -111,7 +111,14 @@ public class SecurityConfig {
 	 	.antMatchers(HttpMethod.POST, "/api/produto").permitAll()
 	 	.antMatchers(HttpMethod.PUT, "/api/produto").permitAll()
 	 	.antMatchers(HttpMethod.DELETE, "/api/produto").permitAll()
-	 	.antMatchers(HttpMethod.GET, "/api/produto/**").permitAll()
+	 	.antMatchers(HttpMethod.GET, "/api/produto/**").permitAll()	 	
+
+	 	//Configuração de autorizações de acesso para Pedidos
+	 	
+	 	.antMatchers(HttpMethod.POST, "/api/pedido").permitAll()
+	 	.antMatchers(HttpMethod.PUT, "/api/pedido/*").permitAll()
+	 	.antMatchers(HttpMethod.DELETE, "/api/pedido/*").permitAll()
+	 	.antMatchers(HttpMethod.GET, "/api/pedido/**").permitAll()
 	 	
 //	 	.antMatchers(AUTH_WHITELIST).permitAll()
 //	 	.antMatchers(HttpMethod.POST, "/api/login/signin").permitAll()

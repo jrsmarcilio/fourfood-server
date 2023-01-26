@@ -18,8 +18,10 @@ public class ClienteService extends GenericService {
 
 	@Autowired
 	private ClienteRepository repository;
+
 	@Autowired
 	private EmailService emailService;
+
 	@Autowired
 	private UsuarioService usuarioService;
 
@@ -40,11 +42,6 @@ public class ClienteService extends GenericService {
 		} else {
 			throw new EntidadeNaoEncontradaException("Cliente", id);
 		}
-	}
-
-	@Transactional
-	public List<Cliente> consultarPorChaveEmpresa(String chaveEmpresa) {
-		return repository.findByChaveEmpresaOrderByNomeAsc(chaveEmpresa);
 	}
 
 	@Transactional

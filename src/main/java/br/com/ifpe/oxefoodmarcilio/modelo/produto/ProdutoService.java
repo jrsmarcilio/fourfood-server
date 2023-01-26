@@ -23,7 +23,6 @@ public class ProdutoService extends GenericService {
 		if (produto.getValorUnitario() < 10) {
 		    throw new ProdutoException(ProdutoException.MSG_VALOR_MINIMO_PRODUTO);
 		}
-		
 		super.preencherCamposAuditoria(produto);
 		return repository.save(produto);
 	}
@@ -44,9 +43,7 @@ public class ProdutoService extends GenericService {
 		Produto produto = this.findById(id);
 		produto.updateFrom(produtoAlterado);
 		super.preencherCamposAuditoria(produto);
-
 		repository.save(produto);
-		
 		return produto;
 	}
 

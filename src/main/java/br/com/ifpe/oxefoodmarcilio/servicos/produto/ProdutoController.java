@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ import br.com.ifpe.oxefoodmarcilio.util.entity.GenericController;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/api/produto")
 public class ProdutoController extends GenericController {
 
@@ -64,10 +66,8 @@ public class ProdutoController extends GenericController {
 	@ApiOperation(value = "Serviço responsável por atualizar as informações do produto no sistema.")
 	@PutMapping("/{id}")
 	public ResponseEntity<Produto> update(@PathVariable("id") Long id, @RequestBody ProdutoRequest request) {
-
 		Produto produto = request.buildProduto();
 		Produto produtoAtualizado = produtoService.update(id, produto);
-
 		return new ResponseEntity<Produto>(produtoAtualizado, HttpStatus.OK);
 	}
 

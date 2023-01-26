@@ -29,10 +29,6 @@ public class ClienteRequest {
 	@NotBlank(message = "A senha é de preenchimento obrigatório")
 	private String password;
 
-	@NotNull(message = "O Chave Empresa é de preenchimento obrigatório")
-	@NotBlank(message = "O Chave Empresa é de preenchimento obrigatório")
-	private String chaveEmpresa;
-
 	@NotNull(message = "O Nome é de preenchimento obrigatório")
 	@NotBlank(message = "O Nome é de preenchimento obrigatório")
 	@Length(max = 100, message = "O Nome deverá ter no máximo {max} caracteres")
@@ -49,7 +45,7 @@ public class ClienteRequest {
 	private String foneAlternativo;
 
 	public Cliente buildCliente() {
-		return Cliente.builder().chaveEmpresa(chaveEmpresa).nome(nome).email(email).cpf(cpf).fone(fone)
+		return Cliente.builder().nome(nome).email(email).cpf(cpf).fone(fone)
 				.foneAlternativo(foneAlternativo).usuario(buildUsuario()).build();
 	}
 
